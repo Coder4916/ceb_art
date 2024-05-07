@@ -10824,3 +10824,15 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+/* My custom CSS */
+
+.header-bg-img {
+  background: url('/static/media/chalk_bg.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+
+
+
+
+
