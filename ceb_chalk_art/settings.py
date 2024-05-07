@@ -27,7 +27,7 @@ SECRET_KEY = '-5=(ya)l)##gwv$yzpny#6zk%ddah1%%vpzk(95^3i_%eu$4#^'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-coder4916-cebchalkart-xmxqv4w7czo.ws-eu113.gitpod.io'
+    '8000-coder4916-cebchalkart-xmxqv4w7czo.ws-eu111.gitpod.io'
 ]
 
 
