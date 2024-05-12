@@ -1,0 +1,236 @@
+  [{
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5001340155",
+        "name": "A Stag a Kite and a Wolf",
+        "description": "A chalk picture of a Wolf, Stag and Kite",
+        "price": 53.99,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "",
+        "image": "animals.jpg"
+    }
+}, {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5001600425",
+        "name": "Anya Taylor-Joy",
+        "description": "Anya Taylor-Joy in The Queen's Gambit",
+        "price": 58.99,
+        "category": 2,
+        "rating": 4.6,
+        "image_url": "",
+        "image": "anya.jpg"
+    }
+}, {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5001730010",
+        "name": "Arnold Schwarzenegger",
+        "description": "Arnold Schwarzenegger in Predator",
+        "price": 205.99,
+        "category": 2,
+        "rating": 4.7,
+        "image_url": "",
+        "image": "arnie.jpg"
+    }
+}, {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5001890157",
+        "name": "Winston Churchill",
+        "description": "Winston Churchill smoking a cuban cigar",
+        "price": 169.99,
+        "category": 1,
+        "rating": 3.0,
+        "image_url": "",
+        "image": "churchill.jpg"
+    }
+}, {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002111605",
+        "name": "The Looney Tunes",
+        "description": "Characters from The Looney Tunes",
+        "price": 232.99,
+        "category": 1,
+        "rating": 5.0,
+        "image_url": "",
+        "image": "looney.jpg"
+    }
+}, {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002260206",
+        "name": "Banksy's the Earth without Art is just eh",
+        "description": "Two workers placing .this piece of Art",
+        "price": 30.99,
+        "category": 4,
+        "rating": 4.7,
+        "image_url": "",
+        "image": "banksyeh.jpg"
+    }
+}, {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002440521",
+        "name": "Banksy in Palestine ",
+        "description": "An anti-war figure throwing a bouquet of flowers",
+        "price": 590,
+        "category": 4,
+        "rating": 4.4,
+        "image_url": "",
+        "image": "banksyinp.jpg"
+    }
+}, {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002601115",
+        "name": "Voyage of Dreams",
+        "description": "Figure in a boat seascape",
+        "price": 36.99,
+        "category": 3,
+        "rating": 4.5,
+        "image_url": "",
+        "image": "voyage.jpg"
+    }
+}, {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002690715",
+        "name": "The Bartender",
+        "description": "A pastel painting of a bar and bartender",
+        "price": 169.99,
+        "category": 3,
+        "rating": 4.7,
+        "image_url": "",
+        "image": "bartender.jpg"
+    }
+}, {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002701115",
+        "name": "Colourful Eye",
+        "description": "A colourful eye printed on metal",
+        "price": 33.99,
+        "category": 4,
+        "rating": 4.4,
+        "image_url": "",
+        "image": "coloredeye.jpg"
+    }
+}, {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002761055",
+        "name": "A lighthouse",
+        "description": "A lighthouse in the dark sat atop a choppy sea",
+        "price": 29.99,
+        "category": 3,
+        "rating": 3.0,
+        "image_url": "",
+        "image": "lighthouse.jpg"
+    }
+}, {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002820069",
+        "name": "Peacock",
+        "description": "A peacock feather",
+        "price": 19.99,
+        "category": 3,
+        "rating": 4.6,
+        "image_url": "",
+        "image": "peacockfeather.jpg"
+    }
+}, {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002820147",
+        "name": "The Persistence of Memory",
+        "description": "A set of clocks, melting in a surreal landscape",
+        "price": 20.0,
+        "category": 3,
+        "rating": 5,
+        "image_url": "",
+        "image": "salvadordpom.jpg"
+    }
+}, {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002910572",
+        "name": "A Samurai Warrior",
+        "description": "A lone Samurai with sword drawn, in a squat position ready to advance",
+        "price": 26.99,
+        "category": 2,
+        "rating": 4.7,
+        "image_url": "",
+        "image": "samurai.jpg"
+    }
+}, {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5002990740",
+        "name": "Shapes",
+        "description": "A vibrant, colorful painting of various shapes",
+        "price": 48.99,
+        "category": 3,
+        "rating": 4.8,
+        "image_url": "",
+        "image": "shapes.jpg"
+    }
+}, {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5003050248",
+        "name": "A street scene",
+        "description": "A wet street scene of an evening in autumn, with a lone bicyclist and street lamps",
+        "price": 65.99,
+        "category": 3,
+        "rating": 4.4,
+        "image_url": "",
+        "image": "streetlamps.jpg"
+    }
+}, {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5003070787",
+        "name": "Sunset",
+        "description": "A seaside scene during sunset",
+        "price": 33.99,
+        "category": 3,
+        "rating": 4.4,
+        "image_url": "",
+        "image": "sunset.jpg"
+    }
+}, {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+        "sku": "pp5003090182",
+        "name": "A walk in the woods",
+        "description": "A path weaving through a wood in autumn",
+        "price": 59.99,
+        "category": 3,
+        "rating": 4.8,
+        "image_url": "",
+        "image": "walkinthewoods.jpg"
+    }
+} 
+]
