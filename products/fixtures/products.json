@@ -1,4 +1,5 @@
-  [{
+  [
+    {
     "pk": 1,
     "model": "products.product",
     "fields": {
@@ -8,7 +9,6 @@
         "price": 53.99,
         "category": 1,
         "rating": 4.6,
-        "image_url": "",
         "image": "animals.jpg"
     }
 }, {
@@ -21,7 +21,6 @@
         "price": 58.99,
         "category": 2,
         "rating": 4.6,
-        "image_url": "",
         "image": "anya.jpg"
     }
 }, {
@@ -30,11 +29,10 @@
     "fields": {
         "sku": "pp5001730010",
         "name": "Arnold Schwarzenegger",
-        "description": "Arnold Schwarzenegger in Predator",
+        "description": "Arnold Schwarzenegger in Predator (1987)",
         "price": 205.99,
         "category": 2,
         "rating": 4.7,
-        "image_url": "",
         "image": "arnie.jpg"
     }
 }, {
@@ -47,7 +45,6 @@
         "price": 169.99,
         "category": 1,
         "rating": 3.0,
-        "image_url": "",
         "image": "churchill.jpg"
     }
 }, {
@@ -60,7 +57,6 @@
         "price": 232.99,
         "category": 1,
         "rating": 5.0,
-        "image_url": "",
         "image": "looney.jpg"
     }
 }, {
@@ -73,7 +69,6 @@
         "price": 30.99,
         "category": 4,
         "rating": 4.7,
-        "image_url": "",
         "image": "banksyeh.jpg"
     }
 }, {
@@ -81,12 +76,11 @@
     "model": "products.product",
     "fields": {
         "sku": "pp5002440521",
-        "name": "Banksy in Palestine ",
+        "name": "Banksy in Palestine",
         "description": "An anti-war figure throwing a bouquet of flowers",
         "price": 590,
         "category": 4,
         "rating": 4.4,
-        "image_url": "",
         "image": "banksyinp.jpg"
     }
 }, {
@@ -99,7 +93,6 @@
         "price": 36.99,
         "category": 3,
         "rating": 4.5,
-        "image_url": "",
         "image": "voyage.jpg"
     }
 }, {
@@ -112,7 +105,6 @@
         "price": 169.99,
         "category": 3,
         "rating": 4.7,
-        "image_url": "",
         "image": "bartender.jpg"
     }
 }, {
@@ -125,7 +117,6 @@
         "price": 33.99,
         "category": 4,
         "rating": 4.4,
-        "image_url": "",
         "image": "coloredeye.jpg"
     }
 }, {
@@ -138,7 +129,6 @@
         "price": 29.99,
         "category": 3,
         "rating": 3.0,
-        "image_url": "",
         "image": "lighthouse.jpg"
     }
 }, {
@@ -151,7 +141,6 @@
         "price": 19.99,
         "category": 3,
         "rating": 4.6,
-        "image_url": "",
         "image": "peacockfeather.jpg"
     }
 }, {
@@ -164,7 +153,6 @@
         "price": 20.0,
         "category": 3,
         "rating": 5,
-        "image_url": "",
         "image": "salvadordpom.jpg"
     }
 }, {
@@ -177,7 +165,6 @@
         "price": 26.99,
         "category": 2,
         "rating": 4.7,
-        "image_url": "",
         "image": "samurai.jpg"
     }
 }, {
@@ -190,7 +177,6 @@
         "price": 48.99,
         "category": 3,
         "rating": 4.8,
-        "image_url": "",
         "image": "shapes.jpg"
     }
 }, {
@@ -199,11 +185,10 @@
     "fields": {
         "sku": "pp5003050248",
         "name": "A street scene",
-        "description": "A wet street scene of an evening in autumn, with a lone bicyclist and street lamps",
+        "description": "A wet street scene in autumn, with a lone bicyclist and street lamps",
         "price": 65.99,
         "category": 3,
         "rating": 4.4,
-        "image_url": "",
         "image": "streetlamps.jpg"
     }
 }, {
@@ -216,7 +201,6 @@
         "price": 33.99,
         "category": 3,
         "rating": 4.4,
-        "image_url": "",
         "image": "sunset.jpg"
     }
 }, {
@@ -229,7 +213,6 @@
         "price": 59.99,
         "category": 3,
         "rating": 4.8,
-        "image_url": "",
         "image": "walkinthewoods.jpg"
     }
 } 

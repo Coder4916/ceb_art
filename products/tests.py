@@ -1,3 +1,6 @@
 from django.test import TestCase
+from .models import Product, Category
 
-# Create your tests here.
+
+admin.site.register(Product)
+admin.site.register(Category)
