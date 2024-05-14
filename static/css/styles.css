@@ -10828,7 +10828,7 @@ textarea.form-control-lg {
 /* My custom CSS */
 
 .header-bg-img {
-  background: url('/static/media/chalk_bg.jpg') no-repeat center fixed;
+  background: url('/media/chalk_bg.jpg') no-repeat center fixed;
   background-size: cover;
 }
 
