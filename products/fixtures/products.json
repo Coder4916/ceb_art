@@ -27,18 +27,6 @@
     "pk": 3,
     "model": "products.product",
     "fields": {
-        "product_num": "pp5001730010",
-        "artwork": "Arnold Schwarzenegger",
-        "description": "Arnold Schwarzenegger in Predator (1987)",
-        "price": 205.99,
-        "art_category": 2,
-        "rating": 4.7,
-        "art_image": "arnie.jpg"
-    }
-}, {
-    "pk": 4,
-    "model": "products.product",
-    "fields": {
         "product_num": "pp5001890157",
         "artwork": "Winston Churchill",
         "description": "Winston Churchill smoking a cuban cigar",
@@ -48,7 +36,7 @@
         "art_image": "churchill.jpg"
     }
 }, {
-    "pk": 5,
+    "pk": 4,
     "model": "products.product",
     "fields": {
         "product_num": "pp5002111605",
@@ -60,7 +48,7 @@
         "art_image": "looney.jpg"
     }
 }, {
-    "pk": 6,
+    "pk": 5,
     "model": "products.product",
     "fields": {
         "product_num": "pp5002260206",
@@ -72,7 +60,7 @@
         "art_image": "banksyeh.jpg"
     }
 }, {
-    "pk": 7,
+    "pk": 6,
     "model": "products.product",
     "fields": {
         "product_num": "pp5002440521",
@@ -84,7 +72,7 @@
         "art_image": "banksyinp.jpg"
     }
 }, {
-    "pk": 8,
+    "pk": 7,
     "model": "products.product",
     "fields": {
         "product_num": "pp5002601115",
@@ -96,7 +84,7 @@
         "art_image": "voyage.jpg"
     }
 }, {
-    "pk": 9,
+    "pk": 8,
     "model": "products.product",
     "fields": {
         "product_num": "pp5002690715",
@@ -108,7 +96,7 @@
         "art_image": "bartender.jpg"
     }
 }, {
-    "pk": 10,
+    "pk": 9,
     "model": "products.product",
     "fields": {
         "product_num": "pp5002701115",
@@ -120,7 +108,7 @@
         "art_image": "coloredeye.jpg"
     }
 }, {
-    "pk": 11,
+    "pk": 10,
     "model": "products.product",
     "fields": {
         "product_num": "pp5002761055",
@@ -132,7 +120,7 @@
         "art_image": "lighthouse.jpg"
     }
 }, {
-    "pk": 12,
+    "pk": 11,
     "model": "products.product",
     "fields": {
         "product_num": "pp5002820069",
@@ -144,7 +132,7 @@
         "art_image": "peacockfeather.jpg"
     }
 }, {
-    "pk": 13,
+    "pk": 12,
     "model": "products.product",
     "fields": {
         "product_num": "pp5002820147",
@@ -156,7 +144,7 @@
         "art_image": "salvadordpom.jpg"
     }
 }, {
-    "pk": 14,
+    "pk": 13,
     "model": "products.product",
     "fields": {
         "product_num": "pp5002910572",
@@ -168,19 +156,7 @@
         "art_image": "samurai.jpg"
     }
 }, {
-    "pk": 15,
-    "model": "products.product",
-    "fields": {
-        "product_num": "pp5002990740",
-        "artwork": "Shapes",
-        "description": "A vibrant, colorful painting of various shapes",
-        "price": 48.99,
-        "art_category": 3,
-        "rating": 4.8,
-        "art_image": "shapes.jpg"
-    }
-}, {
-    "pk": 16,
+    "pk": 14,
     "model": "products.product",
     "fields": {
         "product_num": "pp5003050248",
@@ -192,7 +168,7 @@
         "art_image": "streetlamps.jpg"
     }
 }, {
-    "pk": 17,
+    "pk": 15,
     "model": "products.product",
     "fields": {
         "product_num": "pp5003070787",
@@ -204,7 +180,7 @@
         "art_image": "sunset.jpg"
     }
 }, {
-    "pk": 18,
+    "pk": 16,
     "model": "products.product",
     "fields": {
         "product_num": "pp5003090182",
@@ -216,7 +192,7 @@
         "art_image": "walkinthewoods.jpg"
     }
 }, {
-    "pk": 19,
+    "pk": 17,
     "model": "products.product",
     "fields": {
         "product_num": "pp5003013013",
@@ -228,7 +204,7 @@
         "art_image": "batman.jpg"
     }
 },{
-    "pk": 20,
+    "pk": 18,
     "model": "products.product",
     "fields": {
         "product_num": "pp5003012012",
@@ -240,7 +216,7 @@
         "art_image": "keanur.jpg"
     }
 },  {
-    "pk": 21,
+    "pk": 19,
     "model": "products.product",
     "fields": {
         "product_num": "pp5003014014",
@@ -252,7 +228,7 @@
         "art_image": "jenniferl.jpg"
     }
 },  {
-    "pk": 22,
+    "pk": 20,
     "model": "products.product",
     "fields": {
         "product_num": "pp5003015015",
