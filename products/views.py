@@ -10,8 +10,23 @@ def art_products(request):
     products = Product.objects.all()
     search = None
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
+
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -27,10 +42,13 @@ def art_products(request):
             searches = Q(artwork__icontains=search) | Q(description__icontains=search)
             products = products.filter(searches)
 
+    sorting = f'{sort}_{direction}'
+
     context = {
         'products': products,
         'search_term': search,
         'current_categories': categories,
+        'sorting': sorting,
     }
     return render(request, 'products/art_products.html', context)
 

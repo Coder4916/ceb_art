@@ -13,6 +13,18 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
+            <div class="dropdown-menu border-0">
+
+            </div>
+            <div class="dropdown offset-10 pt-3">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Filter
+                </button>
+                <ul class="dropdown-menu">
+                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                    <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+            </div>
             <div class="container header-container">
                 <div class="row">
                     <div class="col">
@@ -29,13 +41,13 @@
                         <div class="card h-100">
                             {% if product.art_image %}
                             <a href="{% url 'artwork_details' product.id %}">
-                                <img class="card-img-top img-fluid border border-secondary border-5" src="{{ product.art_image.url }}"
-                                alt="{{ product.name }}" />
+                                <img class="card-img-top img-fluid border border-secondary border-5"
+                                    src="{{ product.art_image.url }}" alt="{{ product.name }}" />
                             </a>
                             {% else %}
                             <a href="{% url 'artwork_details' product.id %}">
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimg.png"
-                                alt="{{ product.name }}" />
+                                    alt="{{ product.name }}" />
                             </a>
                             {% endif %}
                             <div class="card-body p-4">
@@ -48,16 +60,17 @@
                                     <div class="col text-center">
                                         <p>£{{ product.price }}</p>
                                         {% if product.rating %}
-                                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}/5</small>
-                                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                                <div class="bi-star-fill"></div>
-                                                <div class="bi-star-fill"></div>
-                                                <div class="bi-star-fill"></div>
-                                                <div class="bi-star-fill"></div>
-                                                <div class="bi-star-fill"></div>
-                                            </div>
+                                        <small class="text-muted"><i
+                                                class="fas fa-star mr-1"></i>{{ product.rating }}/5</small>
+                                        <div class="d-flex justify-content-center small text-warning mb-2">
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                            <div class="bi-star-fill"></div>
+                                        </div>
                                         {% else %}
-                                            <small class="text-muted">No rating</small>
+                                        <small class="text-muted">No rating</small>
                                         {% endif %}
                                         <p><a class="btn btn-outline-dark mt-auto" href="">View</a></p>
                                     </div>
