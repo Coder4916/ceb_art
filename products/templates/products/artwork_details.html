@@ -11,43 +11,50 @@
 {% endblock %}
 
 {% block content %}
-    <!-- Product section-->
-        <section class="py-5">
-            <div class="container container-fluid px-4 px-lg-5 my-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6">{% if product.art_image %}
-                        <a href="{{ product.art_image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid border border-secondary border-5" src="{{ product.art_image.url }}"
-                            alt="{{ product.name }}" />
+<!-- Product section-->
+<section class="py-5">
+    <div class="container container-fluid px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6">{% if product.art_image %}
+                <a href="{{ product.art_image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid border border-secondary border-5"
+                        src="{{ product.art_image.url }}" alt="{{ product.name }}" />
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimg.png" alt="{{ product.name }}" />
+                </a>
+                {% endif %}</div>
+            <div class="col-md-6">
+                <div class="small mb-2">SKU: {{ product.product_num }}</div>
+                <h1 class="display-5 fw-bolder">{{ product.artwork }}</h1>
+                <div class="fs-5 mb-2">
+                    <span>£{{ product.price }}</span>
+                </div>
+                <div class="mb-5">
+                    {% if product.category %}
+                    <p>
+                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                            <i class="fas fa-tag"></i>{{ product.category.friendly_name }}
                         </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimg.png"
-                            alt="{{ product.name }}" />
-                        </a>
-                        {% endif %}</div>
-                    <div class="col-md-6">
-                        <div class="small mb-2">SKU: {{ product.product_num }}</div>
-                        <h1 class="display-5 fw-bolder">{{ product.artwork }}</h1>
-                        <div class="fs-5 mb-2">
-                            <span>£{{ product.price }}</span>
-                        </div>
-                        <div class="mb-5">
-                            {% if product.rating %}
-                            <small class="text-muted"><i class="fas fa-star"></i>{{ product.rating }}/5</small>
-                            {% else %}
-                            {% endif %}
-                        </div>
-                        <p class="lead">{{ product.description }}</p>
-                        <div class="d-flex">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
-                        </div>
-                    </div>
+                    </p>
+                    {% endif %}
+                    {% if product.rating %}
+                    <small class="text-muted"><i class="fas fa-star"></i>{{ product.rating }}/5</small>
+                    {% else %}
+                    {% endif %}
+                </div>
+                <p class="lead">{{ product.description }}</p>
+                <div class="d-flex">
+                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
+                        style="max-width: 3rem" />
+                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                        <i class="bi-cart-fill me-1"></i>
+                        Add to cart
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 {% endblock %}

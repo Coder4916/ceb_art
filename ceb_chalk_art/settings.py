@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = [
-    '8000-coder4916-cebchalkart-xmxqv4w7czo.ws-eu111.gitpod.io'
+    '8000-coder4916-cebchalkart-xmxqv4w7czo.ws-eu114.gitpod.io'
 ]
 
 
