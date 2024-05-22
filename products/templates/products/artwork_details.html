@@ -31,16 +31,16 @@
                 <div class="fs-5 mb-2">
                     <span>£{{ product.price }}</span>
                 </div>
-                <div class="mb-5">
-                    {% if product.category %}
+                <div class="mb-3">
+                    {% if product.art_category %}
                     <p>
-                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag"></i>{{ product.category.friendly_name }}
+                        <a class="text-muted" href="{% url 'products' %}?category={{ product.art_category.name }}">
+                            <i class="fas fa-tag"></i>{{ product.art_category.friendly_name }}
                         </a>
                     </p>
                     {% endif %}
                     {% if product.rating %}
-                    <small class="text-muted"><i class="fas fa-star"></i>{{ product.rating }}/5</small>
+                    <small class="text-muted mb-2"><i class="fas fa-star"></i>{{ product.rating }}/5</small>
                     {% else %}
                     {% endif %}
                 </div>

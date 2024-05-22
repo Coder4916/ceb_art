@@ -48,7 +48,7 @@ def art_products(request):
         'products': products,
         'search_term': search,
         'current_categories': categories,
-        'sorting': sorting,
+        'current_sorting': sorting,
     }
     return render(request, 'products/art_products.html', context)
 

@@ -14,15 +14,6 @@
 <div class="container-fluid">
     <div class="row">
         <div class="dropdown-menu border-0">
-
-        </div>
-        <div class="dropdown offset-10 pt-3">
-            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Filter
-            </button>
-            <ul class="dropdown-menu">
-                <a href="{% url 'products' %}?=sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
         </div>
         <div class="container header-container">
             <div class="row">
@@ -32,11 +23,11 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-10 product-container offset-1">
+        <div class="col-12 product-container">
             <div class="row mt-1 mb-2"></div>
             <div class="row">
                 {% for product in products %}
-                <div class="mt-1 mb-2 col-md-6 col-lg-4 col-xl-3">
+                <div class="mt-2 mb-2 col-md-5 col-lg-3 col-xl-2">
                     <div class="card h-100">
                         {% if product.art_image %}
                         <a href="{% url 'artwork_details' product.id %}">
@@ -49,12 +40,12 @@
                                 alt="{{ product.name }}" />
                         </a>
                         {% endif %}
-                        <div class="card-body p-4">
+                        <div class="card-body mt-2">
                             <div class="text-center">
                                 <h5 class="fw-bolder">{{ product.artwork }}</h5>
                             </div>
                         </div>
-                        <div class="card-footer pt-0 border-top-0 bg-transparent">
+                        <div class="card-footer border-top-0 bg-transparent">
                             <div class="row">
                                 <div class="col text-center">
                                     <p>£{{ product.price }}</p>
@@ -68,8 +59,8 @@
                                     {% endif %}
                                     {% if product.rating %}
                                     <small class="text-muted"><i
-                                            class="fas fa-star mr-1"></i>{{ product.rating }}/5</small>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                            class="fas fa-star"></i>{{ product.rating }}/5</small>
+                                    <div class="d-flex justify-content-center small text-warning mb-3 mt-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
