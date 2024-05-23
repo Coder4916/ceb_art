@@ -20,7 +20,8 @@ def art_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-            
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -39,7 +40,7 @@ def art_products(request):
                 messages.error(request, "No search request!")
                 return redirect(reverse ('products'))
 
-            searches = Q(artwork__icontains=search) | Q(description__icontains=search)
+            searches = Q(artwork__icontains=search) | Q(description__icontains=search) | Q(art_image__icontains=search)
             products = products.filter(searches)
 
     sorting = f'{sort}_{direction}'
