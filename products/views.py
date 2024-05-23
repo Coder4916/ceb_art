@@ -43,7 +43,7 @@ def art_products(request):
             products = products.filter(searches)
 
     sorting = f'{sort}_{direction}'
-
+    categories = Category.objects.all()
     context = {
         'products': products,
         'search_term': search,

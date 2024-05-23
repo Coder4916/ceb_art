@@ -7,17 +7,11 @@
                 aria-expanded="false">Shop</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
-
                 <li>
                     <hr class="dropdown-divider" />
                 </li>
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=chalkart">Chalk</a></li>
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=pencilart">Pencil</a></li>
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=paintart">Paint</a></li>
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=stencilart">Stencil</a></li>
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=miscart">Miscellaneous</a></li>
+                <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
+                <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a></li>
             </ul>
         </li>
     </ul>
