@@ -34,15 +34,13 @@
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-sm-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
                         <select id="sort-selector" class="rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if current_sorting == 'None_None' %}Selected{% endif %}>Sort by</option>
+                            <option value="reset" {% if current_sorting == 'None_None' %}Selected{% endif %}>Filter</option>
                             <option value="price_asc" {% if current_sorting == 'price_asc' %}Selected{% endif %}>Price (low to high)</option>
                             <option value="price_desc" {% if current_sorting == 'price_desc' %}Selected{% endif %}>Price (high to low)</option>
                             <option value="rating_asc" {% if current_sorting == 'rating_asc' %}Selected{% endif %}>Rating (low to high)</option>
                             <option value="rating_desc" {% if current_sorting == 'rating_desc' %}Selected{% endif %}>Rating (high to low)</option>
-                            <option value="name_asc" {% if current_sorting == 'name_asc' %}Selected{% endif %}>Name (A-Z)</option>
-                            <option value="name_desc" {% if current_sorting == 'name_desc' %}Selected{% endif %}>Name (Z-A)</option>
-                            <option value="category_asc" {% if current_sorting == 'category_asc' %}Selected{% endif %}>Category (A-Z)</option>
-                            <option value="category_desc" {% if current_sorting == 'category_desc' %}Selected{% endif %}>Category (Z-A)</option>
+                            <option value="artwork_asc" {% if current_sorting == 'artwork_asc' %}Selected{% endif %}>Name (A-Z)</option>
+                            <option value="artwork_desc" {% if current_sorting == 'artwork_desc' %}Selected{% endif %}>Name (Z-A)</option>
                         </select>
                     </div>
                 </div>
@@ -114,3 +112,32 @@
     </div>
 </div>
 {% endblock %}
+
+
+{% block postloadjs %}
+    {{ block.super }}
+<script type="text/javascript">
+    $('#sort-selector').change(function() {
+        var select = $(this);
+        var currentUrl = new URL(window.location);
+
+        var option = select.val();
+        if(option != "reset"){
+            var sort = option.split("_")[0];
+            var direction = option.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
+{% endblock %}
+
+
