@@ -11,5 +11,24 @@
 {% endblock %}
 
 {% block content %}
+<div class="wallpaper"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-2">Shopping Cart</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% if cart_items %}
+                <div class="table-responsive rounded"></div>
+            {% else %}
+                <p>Your Cart is empty</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}
 

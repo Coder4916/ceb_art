@@ -10849,5 +10849,15 @@ a.category-badge > span.badge:hover {
   cursor: pointer;
 }
 
+.wallpaper {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: beige;
+	z-index: -1;
+}
+
 
 
