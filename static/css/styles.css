@@ -10855,7 +10855,7 @@ a.category-badge > span.badge:hover {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: beige;
+	background: #FAF9F6;
 	z-index: -1;
 }
 

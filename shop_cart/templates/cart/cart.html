@@ -26,6 +26,11 @@
                 <div class="table-responsive rounded"></div>
             {% else %}
                 <p>Your Cart is empty</p>
+                <a href="{% url 'products' %}" class="btn btn-outline-dark mb-3">
+                    <span class="text-uppercase">
+                        Back to Gallery
+                    </span>
+                </a>
             {% endif %}
         </div>
     </div>
