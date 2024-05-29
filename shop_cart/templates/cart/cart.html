@@ -37,10 +37,11 @@
                         {% for item in cart_items %}
                             <tr>
                                 <td class="p-3 w-25">
-                                    <img src="{{ item.product.art_image.url }}" class="img-fluid">
+                                    <img class="img-fluid" src="{{ item.product.art_image.url }}">
                                 </td>
                                 <td class="p-3 w-2">
                                     <p class="my-0"><strong>{{ item.product.artwork }}</strong></p>
+                                    <p class="my-0">Size: <strong>{{ item.product.size }}</strong></p>
                                 </td>
                                 <td class="p-3">
                                     <p class="my-0">£{{ item.product.price }}</p>
