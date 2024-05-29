@@ -53,13 +53,13 @@
                                 </td>
                             </tr>
                         {% endfor %}
-                        <tr>
+                        <tr class="text-end">
                             <td colspan="5" class="py-3 text-right">
                                 <h4><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h4>
                             </td>
                         </tr>
-                        <tr>
-                            <td colspan="5" class="pb-5 text-right">
+                        <tr class="text-end">
+                            <td colspan="5" class="pb-5">
                                 <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
