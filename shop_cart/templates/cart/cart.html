@@ -46,8 +46,8 @@
                                 <td class="p-3">
                                     <p class="my-0">£{{ item.product.price }}</p>
                                 </td>
-                                <td class="p-3">
-                                    <p class="my-0">{{ item.quantity }}</p>
+                                <td class="py-3 w-25">
+                                    {% include "cart/quantity-form.html" %}
                                 </td>
                                 <td class="p-3">
                                     <p class="my-0">£{{ item.product.price }}</p>
