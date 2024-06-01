@@ -27,7 +27,7 @@ def cart_contents(request):
                 product_count += quantity
                 cart_items.append({
                 'artwork_id': artwork_id,
-                'quantity': artwork_data,
+                'quantity': quantity,
                 'product': product,
                 'size': size,
             })
