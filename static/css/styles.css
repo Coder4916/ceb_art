@@ -10845,7 +10845,9 @@ a.category-badge > span.badge:hover {
   height:50px;
 }
 
-.btt-link {
+.btt-link,
+.update,
+.remove {
   cursor: pointer;
 }
 
