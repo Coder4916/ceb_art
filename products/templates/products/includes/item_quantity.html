@@ -46,7 +46,7 @@
     $('.increment-qty').click(function(e) {
        e.preventDefault();
        var itemId = $(this).data('item_id');
-       var size = $(this).data('size');
+       var size = $(this).data('product_size');
        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
        if (size) {
           var allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
@@ -62,7 +62,7 @@
     $('.decrement-qty').click(function(e) {
        e.preventDefault();
        var itemId = $(this).data('item_id');
-       var size = $(this).data('size');
+       var size = $(this).data('product_size');
        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
        if (size) {
           var allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
