@@ -25,13 +25,13 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if size in cart[item_id]['items_by_size'].keys():
                 cart[item_id]['items_by_size'][size] += quantity
-                messages.success(request, f'{product.artwork} added to shopping cart')
+                messages.error(request, f'{product.artwork} added to shopping cart')
             else:
                 cart[item_id]['items_by_size'][size] = quantity
-                messages.success(request, f'{product.artwork} added to shopping cart')
+                messages.error(request, f'{product.artwork} added to shopping cart')
         else:
             cart[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'{product.artwork} added to shopping cart')
+            messages.error(request, f'{product.artwork} added to shopping cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
