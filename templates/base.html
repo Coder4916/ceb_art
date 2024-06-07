@@ -63,10 +63,11 @@
                 </div>
             </div>
         </header>
-        {% if toasts %}
+        {% if messages %}
         <div class="message-container">
-            {% for toast in toasts %}
-            {% include 'includes/toasts/toast_success.html' %}
+            {% for message in messages %}
+                {% include 'includes/toasts/toast_success.html' %}
+            {% endfor %}
         </div>
         {% endif %}
 
@@ -97,10 +98,21 @@
         {% endblock %}
 
         {% block postloadjs %}
-            <script type="text/javascript">
-                $('.toast').toast('show');
-            </script>
+        <script type="text/javascript">
+            /* Show Toast Messages */
+            $(document).ready(function () {
+                $('.toast').show();
+            });
+
+            /* Hide toast Messages on click of close button */
+            $('.btn-close').each(function () {
+                $(this).click(function () {
+                    $('.toast').hide();
+                });
+            });
+        </script>
         {% endblock %}
 
-    </body>
-</html>
+        </body>
+
+        </html>
