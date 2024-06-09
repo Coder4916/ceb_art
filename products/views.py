@@ -38,7 +38,7 @@ def art_products(request):
         if 'q' in request.GET:
             search = request.GET['q']
             if not search:
-                messages.error(request, "No search request!")
+                messages.error(request, "No search request entered!")
                 return redirect(reverse ('products'))
 
             searches = Q(artwork__icontains=search) | Q(description__icontains=search) | Q(art_image__icontains=search)

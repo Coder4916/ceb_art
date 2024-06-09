@@ -10846,7 +10846,7 @@ a.category-badge > span.badge:hover {
 }
 
 .btt-link,
-.adjust-item-qty,
+.update-item-qty,
 .remove-item {
   cursor: pointer;
 }

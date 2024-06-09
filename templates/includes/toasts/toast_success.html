@@ -5,6 +5,13 @@
       </button>
     </div>
     <div class="toast-body mt-3">
-        {{ message }}
+      <div class="row">
+        <div class="col">
+          {{ message }}
+          <hr>
+        </div>
+      </div>
+        {% if grand_total %}
+        {% endif %}
     </div>
   </div>

@@ -17,6 +17,7 @@ def add_to_cart(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
+
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     cart = request.session.get('cart', {})
@@ -25,13 +26,13 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if size in cart[item_id]['items_by_size'].keys():
                 cart[item_id]['items_by_size'][size] += quantity
-                messages.error(request, f'{product.artwork} added to shopping cart')
+                messages.success(request, f"Updated {product.artwork} (size {size.upper()}) quantity to {cart[item_id]['items_by_size'][size]}")
             else:
                 cart[item_id]['items_by_size'][size] = quantity
-                messages.error(request, f'{product.artwork} added to shopping cart')
+                messages.success(request, f"{product.artwork} (size {size.upper()}) added to your art cart")
         else:
             cart[item_id] = {'items_by_size': {size: quantity}}
-            messages.error(request, f'{product.artwork} added to shopping cart')
+            messages.success(request, f"{product.artwork} (size {size.upper()}) added to your art cart")
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -51,15 +52,22 @@ def adjust_cart(request, item_id):
     if size:
         if quantity > 0:
             cart[item_id]['items_by_size'][size] = quantity
+            messages.success(request, f"Updated {product.artwork} (size {size.upper()}) quantity to {cart[item_id]['items_by_size'][size]}")
+
         else:
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
+            messages.success(request, f"{product.artwork} (size {size.upper()}) removed from your art cart")
+
     else:
         if quantity > 0:
             cart[item_id] = quantity
+            messages.success(request, f"{product.artwork} quantity updated to {cart[item_id]}")
+            
         else:
             cart.pop(item_id)
+            messages.success(request, f"{product.artwork} removed from your art cart")
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -79,10 +87,14 @@ def remove_from_cart(request, product_id):
             del cart[product_id]['items_by_size'][size]
             if not cart[product_id]['items_by_size']:
                 cart.pop(product_id)
+            messages.success(request, f"{product.artwork} (size {size.upper()}) removed from your art cart")
+
         else:
             cart.pop(product_id)
+            messages.success(request, f"{product.artwork} removed from your art cart")
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
     except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
