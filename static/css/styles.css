@@ -10868,3 +10868,8 @@ a.category-badge > span.badge:hover {
   z-index: 777;
 }
 
+.cart-wrapper {
+  height:100px;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
