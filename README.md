@@ -1,10 +1,10 @@
-# **The CB Suite**
+# **CEB Art**
 
-![The CB Suite image](/my_suite/static/img/amiresponsive.png)
+![CEB Art image]()
 
 ## **Table of Contents**
 
-- [**The CB Suite**](#the-cb-suite)
+- [**CEB Art**](#CEB Art)
   - [**Table of Contents**](#table-of-contents)
   - [**Introduction**](#introduction)
   - [**UX Development**](#ux-development)
@@ -62,7 +62,7 @@
 
 ## **Introduction**
 
-The-CB-Suite is a Games Review website designed to give gamers/critics the opportunity to leave reviews based on a selection of games in the current market which are hosted on a variety of consoles/platforms. 
+CEB Art is an Art based e-commerce website with the primary purpose of selling art portraits/pictures from a variety of genre's, and where different art media has been used.
 
 The site will also provide a service to the user, helping them to gain a better understanding of the gaming market, assisting a user when making a decision based on game purchases.
 

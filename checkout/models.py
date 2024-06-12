@@ -26,7 +26,7 @@ class Order(models.Model):
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('item_total'))['item_total__sum']
         if self.order_total:
             self.save()
 
@@ -48,7 +48,7 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
 
-        self.lineitem_total = self.product.price * self.quantity
+        self.item_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
