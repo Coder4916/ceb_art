@@ -62,9 +62,9 @@
 
 ## **Introduction**
 
-CEB Art is an Art based e-commerce website with the primary purpose of selling art portraits/pictures from a variety of genre's, and where different art media has been used.
+CEB Art is an Art based e-commerce website with the primary purpose of selling different sized art portraits/pictures from a variety of genres art media has been used.
 
-The site will also provide a service to the user, helping them to gain a better understanding of the gaming market, assisting a user when making a decision based on game purchases.
+The site will also provide a .
 
 There will also be a blog element to the website, where users will have access to external resources and further information to bolster the sites appeal.
 

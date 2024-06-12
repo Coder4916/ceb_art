@@ -63,7 +63,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ceb_chalk_art.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -79,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'shop_cart.contexts.cart_contents',
             ],
             'builtins': [
