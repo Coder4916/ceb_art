@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'products',
     'shop_cart',
     'checkout',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +62,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'ceb_chalk_art.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 TEMPLATES = [
     {
@@ -78,6 +81,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'shop_cart.contexts.cart_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]        
         },
     },
 ]
