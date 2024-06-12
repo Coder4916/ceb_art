@@ -28,6 +28,7 @@
 
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <p class="text-muted">Order Summary ({{ product_count }})</p>
             <div class="row">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -36,11 +37,11 @@
                     <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                 </div>
             </div>
-            {% for item in bag_items %}
+            {% for item in cart_items %}
             <div class="row">
                 <div class="col-2 mb-1">
-                    <a href="{% url 'product_detail' item.product.id %}">
-                        {% if item.product.image %}
+                    <a href="{% url 'artwork_details' item.product.id %}">
+                        {% if item.product.art_image %}
                         <img class="w-100" src="{{ item.product.art_image.url }}" alt="{{ product.artwork }}">
                         {% else %}
                         <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.artwork }}">
@@ -54,7 +55,7 @@
                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                 </div>
                 <div class="col-3 text-right">
-                    <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -66,9 +67,9 @@
                     <p class="my-0">Grand Total:</p>
                 </div>
                 <div class="col-3">
-                    <p class="my-0">${{ total | floatformat:2 }}</p>
-                    <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                    <p class="my-0">£{{ total | floatformat:2 }}</p>
+                    <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                    <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
         </div>
