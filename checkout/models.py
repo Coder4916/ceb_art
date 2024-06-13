@@ -29,7 +29,7 @@ class Order(models.Model):
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
-        self.order_total = self.lineitems.aggregate(Sum('item_total'))['item_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('item_total'))['item_total__sum'] or 0
         
         if self.order_total:
             self.delivery_cost = 0

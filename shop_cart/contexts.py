@@ -9,6 +9,8 @@ def cart_contents(request):
     cart_items = []
     total = 0
     product_count = 0
+    delivery = 0
+    grand_total = 0
     cart = request.session.get('cart', {})
 
     for item_id, item_data in cart.items():
@@ -35,9 +37,8 @@ def cart_contents(request):
 
     if total:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        grand_total = delivery + total
 
-    grand_total = delivery + total
-    
     context = {
         'cart_items': cart_items,
         'total': total,
