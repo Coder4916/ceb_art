@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="logo-font text-center">About Us...</h1>
+                <div>
+                    <p>
+                        Founded in 2024 CEBArt is a family run business. Specialising in printing artworks by famous artists, 
+                        we also promote new artwork as well. CEBArt is the leading marketplace for top-quality artwork, 
+                        All prints come with our money back guarantee. Hassle free shopping, with products delivered straight to your door.
+                    </p>
+                    <h2 class="text-center">
+                        <a href="{% url 'products' %}" class="btn btn-lg">Click here to explore...</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 class="logo-font text-center">Our Reviews...</h1>
+                <div>
+                    <h2 class="text-center">
+                        <a href="{% url 'products' %}" class="btn btn-lg">Click here to explore...</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -10851,13 +10851,13 @@ a.category-badge > span.badge:hover {
   cursor: pointer;
 }
 
-.wallpaper {
+.overlay {
 	height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: #FAF9F6;
+	background: white;
 	z-index: -1;
 }
 
