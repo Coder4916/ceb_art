@@ -32,9 +32,22 @@
             <div class="col">
                 <h1 class="logo-font text-center">Our Reviews...</h1>
                 <div>
-                    <h2 class="text-center">
-                        <a href="{% url 'products' %}" class="btn btn-lg">Click here to explore...</a>
-                    </h2>
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                        <div class="carousel-inner">
+                            {% for review in reviews %}
+                          <div class="carousel-item active">
+                            <img src="{{  }}" class="d-block w-100" alt="...">
+                          </div>
+                            {% endfor %}
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
                 </div>
             </div>
         </div>
