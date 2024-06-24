@@ -8,7 +8,7 @@
 
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
-var stripe = Stripe('pk_test_51PQrw2CBk1oXddjNZbJY3OSdzDPqeyG8tbtnGPbEAycoFXthzyCop1B8aZ1NXBMBM3UA3DC5srDEERPrSETv7KnK00H3PL4kSt');
+var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 var style = {
     base: {
@@ -25,14 +25,12 @@ var style = {
         iconColor: '#dc3545'
     }
 };
-var card = elements.create('card', {
-    style: style
-});
+var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
 // Handle realtime validation errors on the card element
 card.addEventListener('change', function (event) {
-    var displayError = document.getElementById('card-errors');
+    var errorDiv = document.getElementById('card-errors');
     if (event.error) {
         var html = `
             <span class="icon" role="alert">
@@ -40,21 +38,18 @@ card.addEventListener('change', function (event) {
             </span>
             <span>${event.error.message}</span>
         `;
-        $(displayError).html(html);
+        $(errorDiv).html(html);
     } else {
-        displayError.textContent = '';
+        errorDiv.textContent = '';
     }
 });
-
 
 // Handle form submit
 var form = document.getElementById('payment-form');
 
-form.addEventListener('submit', function (ev) {
+form.addEventListener('submit', function(ev) {
     ev.preventDefault();
-    card.update({
-        'disabled': true
-    });
+    card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
