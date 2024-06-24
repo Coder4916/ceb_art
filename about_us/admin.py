@@ -1,5 +1,20 @@
 from django.contrib import admin
-from .models import Review, Username
+from .models import Username, Review
+
+
+class UsernameAdmin(admin.ModelAdmin):
+    list_display = (
+        'username',
+    )
+
+
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = (
+        'username_id'
+        'review',
+        'review_date'
+    )
+
 
 admin.site.register(Review)
 admin.site.register(Username)

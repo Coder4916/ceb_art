@@ -11,6 +11,7 @@ class Username(models.Model):
 
 class Review(models.Model):
 
+    username = models.ForeignKey('Username', null=True, blank=True, on_delete=models.SET_NULL)
     review = models.TextField(null=True, blank=True)
     review_date = models.DateTimeField(auto_now_add=True)
     
