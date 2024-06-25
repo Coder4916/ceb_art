@@ -9,7 +9,6 @@ from .models import Product, Category
 def art_products(request):
 
     products = Product.objects.all()
-    print(products)
     search = None
     categories = None
     sort = None
