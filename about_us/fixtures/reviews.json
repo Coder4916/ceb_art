@@ -1,39 +1,39 @@
 [{"pk": 1, 
-"model": "reviews.review", 
+"model": "about_us.review", 
 "fields": {
     "review": "I recently submitted an order of prints to decorate the estate. First class, professional service! Products were delivered straight to my oak door, keep up the good work!",
-    "review_date": "03-May-2024"
+    "review_date": "2024-05-03"
     }
 },
 
 {"pk": 2, 
-"model": "reviews.review", 
+"model": "about_us.review", 
 "fields": {
     "review": "After thinking of some creative ways of improving the look of my workplace, I searched online for some inspiration. A few prints from CEBArt did the trick!",
-    "review_date": "06-Jun-2024"
+    "review_date": "2024-06-06"
     }
 },
 
 {"pk": 3, 
-"model": "reviews.review", 
+"model": "about_us.review", 
 "fields": {
     "review": "I must say, I was relatively impressed by the overall experience when ordering prints from CEBArt. Being a bit of a big deal in the art world though, I could do better...",
-    "review_date": "12-Apr-2024"
+    "review_date": "2024-04-10"
     }
 },
 
 {"pk": 4, 
-"model": "reviews.review", 
+"model": "about_us.review", 
 "fields": {
     "review": "Ah! Hello there! Bought some prints from CEBArt, really happy with the service! Try it yourself!",
-    "review_date": "14-Jun-2024"
+    "review_date": "2024-06-14"
     }
 },
 
 {"pk": 5, 
-"model": "reviews.review", 
+"model": "about_us.review", 
 "fields": {
     "review": "Nothing in the world is more common than unsuccessful people with talent, leave the house before you find something worth buying from CEBArt. Must try harder!",
-    "review_date": "15-Jan-24"
+    "review_date": "2024-01-15"
     }
 }]

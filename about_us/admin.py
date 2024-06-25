@@ -10,7 +10,7 @@ class UsernameAdmin(admin.ModelAdmin):
 
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
-        'username_id'
+        'username'
         'review',
         'review_date'
     )

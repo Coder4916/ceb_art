@@ -1,33 +1,33 @@
 [{"pk": 1, 
-"model": "reviews.username", 
+"model": "about_us.username", 
 "fields": {
     "username": "sir_chalksalot"
     }
 },
 
 {"pk": 2, 
-"model": "reviews.username", 
+"model": "about_us.username", 
 "fields": {
     "username": "@ms_m_art"
     }
 },
 
 {"pk": 3, 
-"model": "reviews.username", 
+"model": "about_us.username", 
 "fields": {
     "username": "a_wright_artist"
     }
 },
 
 {"pk": 4, 
-"model": "reviews.username", 
+"model": "about_us.username", 
 "fields": {
     "username": "n_buchanan"
     }
 },
 
 {"pk": 5, 
-"model": "reviews.username", 
+"model": "about_us.username", 
 "fields": {
     "username": "blanksy"
     }
