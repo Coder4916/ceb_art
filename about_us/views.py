@@ -1,7 +1,18 @@
 from django.shortcuts import render
+from .models import Username, Review
 
-# Create your views here.
 
+# A view to render the about_us page
 def about_us(request):
-    # A view to render the about_us page
-    return render(request, 'about_us/about_us.html')
+
+    reviews = Review.objects.all()
+    usernames = Username.objects.all()
+
+    context = {
+        'reviews': reviews,
+        'usernames': usernames,
+    }
+    
+    return render(request, 'about_us/about_us.html', context)
+
+

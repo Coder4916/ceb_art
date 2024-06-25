@@ -18,8 +18,8 @@
                 <h1 class="logo-font text-center">About Us...</h1>
                 <div>
                     <p>
-                        Founded in 2024 CEBArt is a family run business. Specialising in printing artworks by famous artists.
-                        Also involved in promoting new artwork, CEBArt is the leading marketplace for top-quality artwork, 
+                        Founded in 2024 CEBArt is a family run business. Specialising in art prints.
+                        Also involved in promoting new artwork, CEBArt is the leading marketplace for top-quality art, 
                         All prints come with our money back guarantee. Hassle free shopping, with products delivered straight to your door.
                     </p>
                     <h2 class="text-center">
@@ -27,29 +27,51 @@
                     </h2>
                 </div>
             </div>
+        </div><div class="row">
+            <div class="col">
+                <div>
+                    <h1 class="logo-font text-center">Our Reviews...</h1>
+                </div>
+            </div>
         </div>
         <div class="row">
+            {{reviews}}
+            {% for review in reviews %}
+            {{review}}
             <div class="col">
-                <h1 class="logo-font text-center">Our Reviews...</h1>
                 <div>
-                    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                    <div id="about_us_carousel" class="carousel slide carousel-fade">
                         <div class="carousel-inner">
-                            {% for review in reviews %}
+                            
+                            
                           <div class="carousel-item active">
-                            <img src="#" class="d-block w-100" alt="...">
+                            
+                            {% if review.review %}
+                                <p>
+                                    {{ review.review }}
+                                </p>
+                            {% endif %}
                           </div>
-                            {% endfor %}
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                          <div>
+                            {% if review.review_date %}
+                                <p>
+                                    Review created:{{ about_us.review_date }}
+                                </p>
+                            {% endif %}
+                          </div>
+                            
+                        <button class="carousel-control-prev" type="button" data-bs-target="#about_us_carousel" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                           <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#about_us_carousel" data-bs-slide="next">
                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
                           <span class="visually-hidden">Next</span>
                         </button>
                       </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
