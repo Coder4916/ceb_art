@@ -12,15 +12,15 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col">
-            <h1 class="logo-font text-center">About Us...</h1>
+        <div class="col-sm-12 col-md-6 m-auto">
+            <h2 class="logo-font text-center my-3">About Us...</h2>
             <div>
-                <p>
+                <p class="text-center">
                     Founded in 2024 CEBArt is the leading marketplace for top-quality artwork,
                     All products come with our money back guarantee. Hassle free shopping, delivered
-                    straight to your door.
+                    straight to your door!
                 </p>
                 <h2 class="text-center">
                     <a href="{% url 'products' %}" class="btn btn-lg">Click here to explore...</a>
@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="row mb-3">
+    <div class="row mx-auto my-3">
         {% for review in reviews %}
         <div class="mb-3 col-md-6 col-lg-4 col-xl-4">
             <div class="card text-bg-light h-100">

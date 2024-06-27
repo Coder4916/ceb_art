@@ -10928,4 +10928,10 @@ a.category-badge > span.badge:hover {
 	color: #17a2b8; /* text-info */
 }
 
-
+.header-bg-img {
+  background: url('/media/bg-color.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: calc(100vh - 164px);
+  color: #555;
+  font-family: 'Lato';
+}
