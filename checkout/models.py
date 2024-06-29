@@ -32,15 +32,23 @@ class Order(models.Model):
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
     
     def _generate_order_number(self):
+
+        # Generate a random, inique order number using UUID
+
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
+
+        # Update grand total each time an item is added, accounting for delivery
+
         self.order_total = self.lineitems.aggregate(Sum('item_total'))['item_total__sum'] or 0
         
         if self.order_total:
+            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+        else:
             self.delivery_cost = 0
-            self.grand_total = self.order_total + self.delivery_cost
-            self.save()
+        self.grand_total = self.order_total + self.delivery_cost
+        self.save()
 
     def save(self, *args, **kwargs):
 
