@@ -1,0 +1,18 @@
+Hello {{ order.full_name }}
+
+This is a confirmation of your order with CEB Art. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.order_total }}
+Delivery: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+Your order will be delivered to {{ order.street_address1 }}, {{ order.town_or_city }}, {{ order.country }}.
+
+If your not completely satisfied with your order/product(s) please contact us at {{ contact_email }}.
+
+Thank you!
+
+CEB Art
