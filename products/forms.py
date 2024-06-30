@@ -14,6 +14,6 @@ class ProductForm(forms.ModelForm):
         friendly_names = [(category.id, category.get_friendly_name()) 
                           for category in categories]
 
-        self.fields['category'].choices = friendly_names
+        self.fields['art_category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
