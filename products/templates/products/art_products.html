@@ -96,6 +96,12 @@
                                     {% endif %}
                                     <p><a class="btn btn-outline-dark mt-auto"
                                             href="{% url 'artwork_details' product.id %}">View</a></p>
+                                    {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'update_product' product.id %}">Update</a>
+                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
