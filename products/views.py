@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Product, Category
 from .forms import ProductForm
 
@@ -97,10 +98,9 @@ def create_product(request):
 
 @login_required
 def update_product(request, product_id):
-
-    # Update a product in the store
+    """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Unable to complete this action, please contact the site administrator')
+        messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -109,12 +109,12 @@ def update_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('artwork_details', args=[product_id]))
+            return redirect(reverse('artwork_details', args=[product.id]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are updating {product.artwork}')
+        messages.info(request, f'You are editing {product.artwork}')
 
     template = 'products/update_product.html'
     context = {
