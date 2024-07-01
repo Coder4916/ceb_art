@@ -67,20 +67,20 @@ def artwork_details(request, product_id):
     return render(request, 'products/artwork_details.html', context)
 
 
-def add_product(request):
+def create_product(request):
     # Add an art product to the store
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully added product')
-            return redirect(reverse('add_product'))
+            messages.success(request, 'Successfully added a product to the site')
+            return redirect(reverse('create_product'))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
-    template = 'products/add_product.html'
+
+    template = 'products/create_product.html'
     context = {
         'form': form
     }

@@ -17,8 +17,8 @@ class Category(models.Model):
 
 class Product(models.Model):
     art_category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    product_num = models.TextField(null=True, blank=True)
-    artwork = models.TextField()
+    product_num = models.CharField(max_length=80, null=True, blank=True)
+    artwork = models.CharField(max_length=100, null=True, blank=True)
     description = models.TextField()
     size = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
