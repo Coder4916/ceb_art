@@ -1,8 +1,11 @@
 /* CSS using the CI walkthrough as guidance */
 
-.header-bg-img {
-  background: url('/media/chalk_bg.jpg') no-repeat center fixed;
+.header-bg {
+  background: url('/media/bg-color.avif') no-repeat center fixed;
   background-size: cover;
+  height: calc(100vh - 164px);
+  color: #555;
+  font-family: 'Lato';
 }
 
 a.category-badge > span.badge:hover {
@@ -24,13 +27,12 @@ a.category-badge > span.badge:hover {
   cursor: pointer;
 }
 
-.overlay {
-	height: 100%;
+.intro {
+	height: 17rem;
 	width: 100%;
 	top: 0;
 	left: 0;
-	position: fixed;
-	background: white;
+	background: whitesmoke;
 	z-index: -1;
 }
 
@@ -101,14 +103,6 @@ a.category-badge > span.badge:hover {
 	color: #17a2b8; /* text-info */
 }
 
-.header-bg-img {
-  background: url('/media/bg-color.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height: calc(100vh - 164px);
-  color: #555;
-  font-family: 'Lato';
-}
-
 /* Product Form */
 
 .btn-file {
@@ -135,4 +129,34 @@ a.category-badge > span.badge:hover {
   background-color: #dc3545;
   border-color: #dc3545;
   border-radius: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.checkout {
+  margin-bottom: 11rem;
+}
+
+.product-dets {
+  margin-bottom: 11rem;
+}
+
+.shop-cart,
+.reviews,
+.products,
+.success {
+  margin-bottom: 9rem;
+}
+
+h2, 
+a, 
+p, 
+select {
+  font-family: 'lato, roboto, arial';
 }

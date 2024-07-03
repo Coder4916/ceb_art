@@ -25,10 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
-DEVELOPMENT = os.environ.get('DEVELOPMENT')
 
 ALLOWED_HOSTS = [
-    '8000-coder4916-cebchalkart-xmxqv4w7czo.ws-eu114.gitpod.io',
     '8000-coder4916-cebart-exjs31guuwj.ws.codeinstitute-ide.net',
 ]
 
@@ -163,7 +161,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/css/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'

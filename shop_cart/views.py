@@ -11,7 +11,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, item_id):
-    """ Add a quantity of the specified product to the shopping cart """
+    # Add a quantity of the specified product to the shopping cart
 
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -34,7 +34,15 @@ def add_to_cart(request, item_id):
             cart[item_id] = {'items_by_size': {size: quantity}}
             messages.success(request, f"{product.artwork} (size {size.upper()}) added to your art cart")
 
-    request.session['cart'] = cart
+    else:
+        if item_id in list(cart.keys()):
+            cart[item_id] += quantity
+            messages.success(request, f'Updated {product.artwork} quantity to {cart[item_id]}')
+        else:
+            cart[item_id] = quantity
+            messages.success(request, f'Added {product.artwork} to your cart')
+
+        request.session['cart'] = cart
     return redirect(redirect_url)
 
 

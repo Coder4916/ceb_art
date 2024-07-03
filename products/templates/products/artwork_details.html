@@ -12,7 +12,7 @@
 
 {% block content %}
 <!-- Product section-->
-<section class="py-5">
+<section class="product-dets">
     <div class="container container-fluid px-4 px-lg-5 my-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-md-6">{% if product.art_image %}
@@ -27,7 +27,7 @@
                 {% endif %}</div>
             <div class="col-md-6">
                 <div class="small mb-2">SKU: {{ product.product_num }}</div>
-                <h1 class="display-5 fw-bolder">{{ product.artwork }}</h1>
+                <h2 class="display-5 fw-bolder">{{ product.artwork }}</h2>
                 <div class="fs-5 mb-2">
                     <span>£{{ product.price }}</span>
                 </div>
