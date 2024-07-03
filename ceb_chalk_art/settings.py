@@ -25,9 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
+DEVELOPMENT = os.environ.get('DEVELOPMENT')
 
 ALLOWED_HOSTS = [
-    '8000-coder4916-cebchalkart-xmxqv4w7czo.ws-eu114.gitpod.io'
+    '8000-coder4916-cebchalkart-xmxqv4w7czo.ws-eu114.gitpod.io',
+    '8000-coder4916-cebart-exjs31guuwj.ws.codeinstitute-ide.net',
 ]
 
 
@@ -61,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'ceb_chalk_art.urls'
