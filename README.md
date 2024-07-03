@@ -62,13 +62,9 @@
 
 ## **Introduction**
 
-CEB Art is an Art based e-commerce website with the primary purpose of selling different sized art portraits/pictures from a variety of genres art media has been used.
+CEB Art is an Art based e-commerce website with the primary purpose of marketing art portraits/pictures from a variety of genres and art media. The site will also provide a place for users to leave reviews about the website, it's products, and anything else pertinent to the site.
 
-The site will also provide a .
-
-There will also be a blog element to the website, where users will have access to external resources and further information to bolster the sites appeal.
-
-The main requirement of this Code Institute project was to build a responsive and interactive back-end site based around a simple CRUD concept, with the primary objective of making the website simple and easy to use. All information and reviews will be stored in a simple Relational Database.
+The main requirement of this Code Institute project was to build a Django full stack website, with the primary objective of making the website simple and easy to us. All of the site's products, orders, users and reviews will be stored in a sqlite relational database.
 
 ## **UX Development**
 
@@ -78,62 +74,62 @@ The main requirement of this Code Institute project was to build a responsive an
 
 #### **First Time User Goals**
 
-1. As a first-time user, I want to be able to navigate the website with ease.
-2. As a first-time user, I want to know what type of games are listed on the site quickly and easily.
-3. As a first-time user, I want to be able to review the site's games quickly and easily 
-4. As a first-time user, I want to be able to see my review on the site, and be able to edit if needed.
-5. As a first-time user, I want to be able to see other user reviews on the site.
-6. As a first-time user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
+1. As a first-time user, I want to be able to navigate the website with ease via a main navigation menu and structured layout.
+1. As a first-time user, I want to be able to purchase products safely and securely on the site.
+2. As a first-time user, I want to know what products are listed on the site quickly and easily, being able to filter products where required.
+3. As a first-time user, I want to be able to review the site's products safely and securely. 
+5. As a first-time user, I want to be able to leave a review on the site if required, and see other user reviews on the site, safely and securely.
+6. As a first-time user, I want to be able to locate the site's social media links to see their followings and find any future updates/products to the site.
 
 #### **Returning User Goals**
   
-1. As a returning user, I want to be able to navigate the website with ease.
-2. As a returning  user, I want to know what type of games are listed on the site quickly and easily.
-3. As a returning  user, I want to be able to review the site's latest games quickly and easily 
-4. As a returning  user, I want to be able to see my current and old reviews on the site, and be able to edit if needed.
-5. As a returning user, I want to be able to see other user reviews on the site.
+1. As a returning user, I want to be able to navigate the website with ease via a main navigation menu and structured layout.
+2. As a returning  user, I want to know what products are listed on the site quickly and easily, being able to filter products where required.
+3. As a returning  user, I want to be able to purchase products safely and securely on the site.
+4. As a returning  user, I want to be able to review the site's products safely and securely.
+5. As a returning user, I want to be able to leave additional reviews on the site if required, and see other user reviews on the site, safely and securely.
 6. As a returning  user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
+6. As a returning  user, I want to be able to access a history of my product purchases.
 
 #### **Frequent User Goals**
   
-1. As a frequent user, I want to be able to navigate the website with ease.
-2. As a frequent user I want easy access to the site's games and reviews, as well as any additional information.
-3. As a frequent user, I want to be able to see other user reviews on the site.
+1. As a frequent user, I want to be able to navigate the website with ease via a main navigation menu and structured layout.
+2. As a frequent user I want safe, easy access to the site's products and reviews, as well as any additional information.
+3. As a frequent user, I want to be able to leave additional reviews on the site if required, and see other user reviews on the site, safely and securely.
 4. As a frequent  user, I want to be able to locate the site's social media links to see their followings and find any future updates to the site.
+4. As a frequent  user, I want to be able to access a history of my product purchases.
 
 ### **Research**
 
 - Online research
 
-I Researched other gaming review websites available online such as [metacritic](https://www.metacritic.com/) and [Den of Geek](https://www.denofgeek.com/games/reviews/). This helped me to understand what is feasible, the aesthetics of other site's in this sector and how they provide a service and user accessibilty.
+I Researched other art websites available online such as [displate](https://displate.com/) and [Artsy](https://www.artsy.net/). This helped me to understand the what is feasible, the aesthetics of other site's in this sector and how they provide a service and user accessibilty.
 
 ### **Project Goals**
 
-The project goal is to provide an interactive back end website, based on a simple CRUD design which will allow a user to create, read, update/edit and delete game reviews on the site. It should be accessible, easy to navigate, and the service provided, clear and unambiguous.
+The project goal is to build a full-stack Django project with relational database to create a website that allows users to store and manipulate data records about a particular domain. It should be accessible, easy to navigate, and the service provided, clear and unambiguous.
 
 ### **User Goals**
 
-The target audience for this website is primarily gamers and game critics, however, the site should be easily accessible for all, providing clear intent and site content.
+The target audience for this website is primarily Artists and Art critics, however, the site should be easily accessible for all, providing clear intent and site content.
 
 Specifically:
 
-- People who might be looking for information on the latest games on the market.
-- Anyone interested in gaming.
-- Anybody looking to make a game purchase and may need guidance.
-- The site can also provide a platform for game critics to indirectly communicate with game developers.
+- People who might be looking for information on popular Artwork in the current market.
+- Anyone interested in Art.
+- Anybody looking to make an Art purchase and may need guidance.
+- The site can also provide a platform for Art critics to indirectly communicate with Artists.
 
-User goals when accessing this website include gaining information about the site's games and allow gamers to have the ability to critic the games on offer in the current market. 
+User goals when accessing this website include gaining information about the site's products and allow users to have the ability to critic the products/artwork on offer in the current market. 
 
-[Back to top](#the-cb-suite)
+[Back to top](#CEB-Art)
 
 ### **Other Considerations**
 
-The CB Suite is a Customer-To-Customer (C2C) product, where people can share reviews and ideas, and discuss the games in the current market, which has considerations as below:
+The CB Suite is a Business-To-Customer (B2C) product, designed to sell Art products to the customer/end user. The site has considerations as below:
 
-- Calming and friendly presence
-- Minimal, to the point content
-- Simple design/aesthetics
-- Adds a social element
+- Minimal, to the point content which utilises a search engine for increased accessibility to products.
+- Simple design/layout/aesthetics
 
 ### **Strategy Table**
 
@@ -141,52 +137,64 @@ Based on the research, goals, and the considerations above, I considered what sh
 
 | Features/Ideas             | Importance | Viability |
 | -------------------------- |:----------:| ---------:|
-|  A. Games page             |      5     |     5     |
-|  B. Reviews page           |      5     |     5     |
-|  C. Add review page        |      5     |     5     |
-|  D. Edit review page       |      5     |     5     |
-|  E. Delete review function |      5     |     5     |
-|  F. Username function      |      4     |     3     |
-|  G. Blog page              |      3     |     3     |
-|  H. Social Media links     |      2     |     3     |
+|  A. Home page              |      5     |     5     |
+|  B. About us page          |      5     |     5     |
+|  C. Art products page      |      5     |     5     |
+|  D. Art product detail page|      5     |     5     |
+|  E. Product sort/filtering |      5     |     4     |
+|  F. Product reviews        |      4     |     2     |
+|  G. Site reviews           |      3     |     3     |
+|  H. Social Media links     |      3     |     4     |
+|  I. Secure payment system  |      5     |     4     |
+|  J. User profile           |      4     |     3     |
+|  K. User order history     |      3     |     3     |
+
 
 ### 2. **Scope Plane**
 
 Based on the mapping in Strategy Plane, I decided to include these contents below in the website:
 
-- Games page; displays several games in the current gaming market, allowing a user to leave a review for each.
-- Reviews page; will display any reviews to the user, and will also include an edit and delete review function.
-- Add review page; accessed via game cards on the games page, and will give the user the ability to create and read reviews based on any game on the site.
-- Edit review page; accessible once a review has been created on the site.
-- Username function; will give a level of security to the site. This will prevent editing/deleting of other reviews, as well as protecting personal reviews.
-- Blog page; will add to the site's usability and appeal, providing further gaming info etc.
-- Social media links; gives the user the ability to contact the owner of the site, and gain further info on the site itself, such as any future updates etc.
+- Home page; A simple introductory layout where the user can access the site's products via a navbar a search engine or links.
+- About us page; Includes any site reviews, based on previous user satisfaction, and includes a brief precis of CEB Art.
+- Art products page; Displays all the products available to purchase from CEB Art.
+- Product details page; Contains all the details of each Art product to the user, such as price and product description.
+- Search bar; Gives a user another level of accessibilty to all the products available on the site.
+- Art products filtering/sorting; Provides further accessibility, allowing the products to be sorted by price for example.
+- Social media links; Will provide an external source of information about the site, or provides another avenue of communication if required by the user.
+- Secure payment; A stripe payment system will be implemented to allow for fast, reliable and secure payments between the site and it's customers.
+- User profile; A user profile provides an extra layer of security to the site and it's customer. 
+- Order History; User history will give a customer the ability to track previous orders where necessary.
+- Site reviews; Built into the About Us page, and gives the customer the abilty to leave a review where needed.
 
 ### 3. **Structure Plane**
 
-The website's front-end will consist of a simple structure with a user friendly navigation element to reach each html page. Each page will also share a consistant base template utilising the web framework Flask. The content specific to each page/child template will be controlled using Flask specific extend/block content tags. Layout on child templates will also be controlled using Flask loop tags. A POSTGRES Database will contain game and review content, which the site will also display via Flask template loops.
+The website's front-end framework will consist of a simple structure with a user friendly navigation element to reach each web application. Each application will also share a consistent base template utilising [Django](https://www.djangoproject.com/). The content specific to each page/child template will be controlled using Django specific extend/block content tags. The layout on child templates will also be controlled using Django, and [Python](https://www.python.org/downloads/) loop tags. An [Elephant SQL](https://www.elephantsql.com/) database will contain all Art products and review content, which the site will also display via Django and Python.
 
-[Back to top](#the-cb-suite)
+[Back to top](#CEB-Art)
 
 ### 4. **Skeleton Plane**
 
 The initial layout and interface of the Website was created using Balsamiq Wireframes. The design/layout and feel of the site was created with UI in mind, which allows immediate interaction in first-time use, and meets the needs of the intended audience.
 
-![Balsamiq-wireframes Blog/Home page](/my_suite/static/img/balsamiq-blog.png)
+![Balsamiq-wireframes Blog/Home page]()
 
-![Balsamiq-wireframes](/my_suite/static/img/balsamiq-game.png)
+![Balsamiq-wireframes About Us]()
 
-![Balsamiq-wireframes](/my_suite/static/img/balsamiq-review.png)
+![Balsamiq-wireframes Products]()
+
+![Balsamiq-wireframes Product details]()
+
+![Balsamiq-wireframes Checkout page]()
 
 ### 5. **Surface Plane**
 
 #### **Color Scheme**
 
-The aesthetics used are primarily derived from the [Clean Blog](https://startbootstrap.com/theme/clean-blog) Theme provided by [Start Bootstrap](https://startbootstrap.com/).
+The aesthetics used are primarily derived from the [Bootstrap Shop](https://startbootstrap.com/template/shop-homepage) Theme provided by [Start Bootstrap](https://startbootstrap.com/).
 
 #### **Typography**
 
-The fonts I used for the website were all included within the [Start Bootstrap](https://startbootstrap.com/) [Clean Blog](https://startbootstrap.com/theme/clean-blog) package, which includes Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif for all titles and navigation bar text, and Lora, Times New Roman and serif for body text.
+The fonts I used for the website were all included within the [Start Bootstrap](https://startbootstrap.com/) [Shop](https://startbootstrap.com/theme/clean-blog) Theme package, which includes Lato for the Header text for all titles and navigation bar text, and Lora, Times New Roman and serif for body text.
 
 #### **Imagery**
 
