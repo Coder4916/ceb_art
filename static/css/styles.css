@@ -5,7 +5,7 @@
   background-size: cover;
   height: calc(100vh - 164px);
   color: #555;
-  font-family: 'Lato';
+  font-family: 'Lato, roboto, arial';
 }
 
 a.category-badge > span.badge:hover {
@@ -143,6 +143,19 @@ a.category-badge > span.badge:hover {
   margin-bottom: 11rem;
 }
 
+.password_reset,
+.sign-up {
+  margin-bottom: 9rem;
+}
+
+.login {
+  margin-bottom: 5rem;
+}
+
+.logout {
+  margin-bottom: 10rem;
+}
+
 .product-dets {
   margin-bottom: 11rem;
 }
@@ -157,6 +170,7 @@ a.category-badge > span.badge:hover {
 h2, 
 a, 
 p, 
-select {
+select,
+td {
   font-family: 'lato, roboto, arial';
 }

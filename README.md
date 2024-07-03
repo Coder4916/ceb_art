@@ -164,11 +164,11 @@ Based on the mapping in Strategy Plane, I decided to include these contents belo
 - Secure payment; A stripe payment system will be implemented to allow for fast, reliable and secure payments between the site and it's customers.
 - User profile; A user profile provides an extra layer of security to the site and it's customer. 
 - Order History; User history will give a customer the ability to track previous orders where necessary.
-- Site reviews; Built into the About Us page, and gives the customer the abilty to leave a review where needed.
+- Site reviews; Built into the About Us page, and gives the customer the abilty to leave a review if they like.
 
 ### 3. **Structure Plane**
 
-The website's front-end framework will consist of a simple structure with a user friendly navigation element to reach each web application. Each application will also share a consistent base template utilising [Django](https://www.djangoproject.com/). The content specific to each page/child template will be controlled using Django specific extend/block content tags. The layout on child templates will also be controlled using Django, and [Python](https://www.python.org/downloads/) loop tags. An [Elephant SQL](https://www.elephantsql.com/) database will contain all Art products and review content, which the site will also display via Django and Python.
+The website's front-end framework will consist of a simple structure with a user friendly navigation element to reach each web application. Each application will also share a consistent base template utilising [Django](https://www.djangoproject.com/). The content specific to each page/child template will be controlled using Django specific extend/block content tags. The layout on child templates will also be controlled using Django, and [Python](https://www.python.org/downloads/) loop elements. An [Elephant SQL](https://www.elephantsql.com/) database will contain all Art products and review content, which the site will also display via Django and Python.
 
 [Back to top](#CEB-Art)
 
@@ -176,31 +176,31 @@ The website's front-end framework will consist of a simple structure with a user
 
 The initial layout and interface of the Website was created using Balsamiq Wireframes. The design/layout and feel of the site was created with UI in mind, which allows immediate interaction in first-time use, and meets the needs of the intended audience.
 
-![Balsamiq-wireframes Blog/Home page]()
+![Balsamiq-wireframes Blog/Home page](/media/bwhome.png)
 
-![Balsamiq-wireframes About Us]()
+![Balsamiq-wireframes About Us](/media/bwaboutus.png)
 
-![Balsamiq-wireframes Products]()
+![Balsamiq-wireframes Products](/media/bwproducts.png)
 
-![Balsamiq-wireframes Product details]()
+![Balsamiq-wireframes Product details](/media/bwdetails.png)
 
-![Balsamiq-wireframes Checkout page]()
+![Balsamiq-wireframes Checkout page](/media/bwcheckout.png)
 
 ### 5. **Surface Plane**
 
 #### **Color Scheme**
 
-The aesthetics used are primarily derived from the [Bootstrap Shop](https://startbootstrap.com/template/shop-homepage) Theme provided by [Start Bootstrap](https://startbootstrap.com/).
+The aesthetics and framework used are primarily derived from the [Bootstrap Shop](https://startbootstrap.com/template/shop-homepage) Theme provided by [Start Bootstrap](https://startbootstrap.com/).
 
 #### **Typography**
 
-The fonts I used for the website were all included within the [Start Bootstrap](https://startbootstrap.com/) [Shop](https://startbootstrap.com/theme/clean-blog) Theme package, which includes Lato for the Header text for all titles and navigation bar text, and Lora, Times New Roman and serif for body text.
+The fonts I used for the website were all included within the [Code Institute](https://learn.codeinstitute.net/dashboard) [Boutique Ado](https://learn.codeinstitute.net/ci_program/level5diplomainwebappdevelopment) project, which includes Lato for all text to give the site an art feel, with Roboto and Arial as fallback fonts .
 
 #### **Imagery**
 
-I have used an image by [Athena](https://www.pexels.com/@athena/) of [computer gadgets on a table](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/) for the main image. A fallback color is included in the [Start Bootstrap](https://startbootstrap.com/) package, which will be added to the body if the main image doesn't load.
+I have used an image by [Kevin Dorg](https://www.pexels.com/@kevin-dorg-136105/) named [Abstract Design Of Different Colors](https://www.pexels.com/photo/abstact-design-of-different-colors-2881262/) for the header image. A fallback color is included in the header-bg css element which will be added if the main header image doesn't load.
 
-[Back to top](#the-cb-suite)
+[Back to top](#ceb-art)
 
 ## **Features**
 
@@ -208,7 +208,7 @@ I have used an image by [Athena](https://www.pexels.com/@athena/) of [computer g
 
 #### 1. **Header**
 
-- The header consists of a [main image](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/), title and navigation bar. The nav-bar includes three nav-links on the right hand side that link to each site page. The header occupies 100% width of the site.
+- The header occupies 100% width of the site and consists of a [main image](https://www.pexels.com/photo/abstact-design-of-different-colors-2881262/), title and search bar. The nav-bar contains a logo and three nav-links on the left that link to each site application, with user profile and shopping cart links on the right.
 
 - The navigation bar is fully responsive on all device sizes. On desktop view, the user can see all nav-links, while on a smaller device, these collapse to a [Bootstrap Hamburger](https://getbootstrap.com/docs/5.3/components/navbar/#toggler) menu.
 

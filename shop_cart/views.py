@@ -19,7 +19,7 @@ def add_to_cart(request, item_id):
     size = None
 
     if 'product_size' in request.POST:
-        size = request.POST['product_size']
+        size = request.POST['size']
     cart = request.session.get('cart', {})
 
     if size:
