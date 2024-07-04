@@ -184,7 +184,7 @@ The initial layout and interface of the Website was created using Balsamiq Wiref
 
 ![Balsamiq-wireframes Product details](/media/bwdetails.png)
 
-![Balsamiq-wireframes Shopping Cart]()
+![Balsamiq-wireframes Shopping Cart](/media/bwshopcart.png)
 
 ![Balsamiq-wireframes Checkout page](/media/bwcheckout.png)
 
@@ -300,7 +300,7 @@ These features will be added where possible during further development phases:
 
 - Issue: Migrating to Gitpod Enterprise.
 
-Solution - env.py file was initially reinstated incorrectly and a new allowed host in project settings.py also had to be updated properly.
+Solution - env.py file was initially reinstated incorrectly and a new allowed host in project settings.py also had to be updated properly. Sizes for all products had to be reset to true in admin, for sizes to display in products details.
 
 - Issue: Migrating products and categories from the Product and Category .models, error in console.
 
