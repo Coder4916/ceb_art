@@ -276,7 +276,7 @@ These features will be added where possible during further development phases:
 
 2. [Bootstrap 5.3](https://getbootstrap.com/) was used to assist with the responsiveness and styling/structure of the website, as well as adding components, such as a [card](https://getbootstrap.com/docs/5.3/components/card/) for each product and for the site reviews.
 
-3. [Django](https://docs.djangoproject.com/en/5.0/ref/templates/language/) reduced repitition when building the html/css site framework, and allowed back-end material to be projected onto the front-end.
+3. [Django](https://docs.djangoproject.com/en/5.0/ref/templates/language/) reduced repitition when building the html/css site framework, and allowed back-end material to be projected onto the front-end. Also provided a built-in administration application.
 
 4. [Font Awesome](https://fontawesome.com/) was used throughout the website to add icons for aesthetic and UX purposes.
 
@@ -300,7 +300,7 @@ These features will be added where possible during further development phases:
 
 - Issue: Migrating to Gitpod Enterprise.
 
-Solution - env.py file was initially reinstated incorrectly and a new allowed host in project settings.py also had to be updated properly. Sizes for all products had to be reset to true in admin, for sizes to display in products details.
+Solution - env.py file was initially reinstated incorrectly and a new 'allowed host' in project settings.py also had to be updated correctly. The new url/endpoint in Stripe also needed fixing, to allow payments/webhooks to function properly. Sizes for all products had to be reset to true in the admin app, for sizes to display in products details.
 
 - Issue: Migrating products and categories from the Product and Category .models, error in console.
 
@@ -308,7 +308,7 @@ Solution - When migrating the product and category models for the first time, th
 
 - Issue: Displaying the Category badges on the products page.
 
-Solution - After some debugging and checking the console for any clues without any luck, I contacted tutor support, who pointed out that I had not included the variable to get all the categories. Once this variable was added to the products view, the badges displayed ok.
+Solution - After some debugging and checking the console for any clues, I contacted tutor support, who pointed out that I had not included the variable to get all the categories. Once this variable was added to the products view.py, the badges displayed ok.
 
 - Issue: Requirements.txt not installing correctly, 'package not pip issue' error showing in console.
 
@@ -316,7 +316,7 @@ On migration to Gitpod Enterprise, I tried installing the requirements for my pr
 
 - Issue: Sizes for products would not display in the shopping cart, once selected in the product details app.
 
-When testing the products could be added to the shopping cart, I noticed that the sizes attached would not display in the cart. After printing the sizes to the console, I discovered that the sizes were not registering at all when the add to cart button was clicked. After some more investigation and tutor guidance, I discovered that the shopping bag would not accept the size metadata I had attached to each size. Once removed, the products with sizes displayed correctly in the cart.
+When testing the products could be added to the shopping cart, I noticed that the sizes attached would not display in the cart. After printing the sizes to the console, I discovered that the sizes were not registering at all when the add to cart button was clicked. After some more investigation and tutor guidance, I discovered that the shopping cart would not accept the metadata I had attached to each size. Once removed, the products with sizes displayed correctly in the cart.
 
 - Issue: Getting the webhooks to work, webhooks pending on Stripe website.
 
@@ -388,7 +388,7 @@ The Website was developed using [Gitpod](https://gitpod.io/workspaces) and Gitpo
 
 - A Stripe payment system API and webhooks mean customers can pay for products safely and securely.
 
-![Stripe payment example]()
+![Stripe payment example](/media/webhooksuccess.png)
 
 3. As a first-time user, I want to know what products are listed on the site quickly and easily, being able to filter products where required.
 
@@ -431,21 +431,17 @@ I used web developer tools extensively throughout the project to update and corr
 
 Below are some examples of areas of the site that I have tested and checked for full responsiveness on all devices. These images show the sections at each [Breakpoint](https://getbootstrap.com/docs/5.3/layout/breakpoints/#core-concepts).
 
-![Header-sm]()
+![Header-sm](/media/headersm.png)
 
-![Header-md]()
+![Header-md](/media/headermd.png)
 
-![Header-lg]()
+![Header-lg](/media/headerlg.png)
 
-![Header-xlg]()
+![Products-sm](/media/productssm.png)
 
-![Products-sm]()
+![Products-md](/media/productsmd.png)
 
-![Products-md]()
-
-![Products-lg]()
-
-![Products-xlg]()
+![Products-lg](/media/productslg.png)
 
 ### **Links Testing**
 
@@ -454,12 +450,17 @@ Once deployed, the website links were tested to ensure that:
 - All navigation external/internal links are working correctly, and filepaths are correct.
 - The social media links are working and opening in a new tab.
 - Hovering and Active states are working.
+- The shopping cart and checkout systems are working correctly.
+- The Stripe payment and webhooks continue to work.
+- Emails are sent correctly from the site.
 
 ### **Forms Testing**
 
-The CEB Art details, shopping cart and checkout forms were tested to make sure that the required fields and buttons/inputs are working, and the form POSTs any input data correctly to the site. I have also included an image of the successful artwork orders added to the admin app and database.
+The CEB Art details, shopping cart and checkout forms were tested to make sure that the required fields and buttons/inputs are working, and the form POSTs any input data correctly to the site. I have also included an image of the successful artwork orders added to the admin app and database, and Stripe api.
 
-![Example of form data successfully posted to my_database]()
+![Example of form data successfully posted to my_database](/media/orderssuccess.png)
+
+![Example of form data successfully posted to the Stripe Developers page](/media/stripesuccess.png)
 
 ## **Autoprefixer CSS**
 
