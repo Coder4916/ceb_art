@@ -107,7 +107,7 @@ SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-WSGI_APPLICATION = 'ceb_art.wsgi.application'
+WSGI_APPLICATION = 'ceb_chalk_art.wsgi.application'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
