@@ -1,0 +1,1 @@
+web: gunicorn ceb_chalk_art.wsgi:application
