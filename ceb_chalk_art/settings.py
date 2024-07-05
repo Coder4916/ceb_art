@@ -29,7 +29,7 @@ DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = [
     '8000-coder4916-cebart-exjs31guuwj.ws.codeinstitute-ide.net',
-    'ceb-art.herokuapp.com',
+    'ceb-art-3810bf4d9953.herokuapp.com',
     'localhost',
 ]
 
