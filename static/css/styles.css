@@ -3,7 +3,6 @@
 .header-bg {
   background: url('/media/bg-color.avif') no-repeat center fixed;
   background-size: cover;
-  height: calc(100vh - 164px);
   color: #555;
   font-family: 'Lato, roboto, arial';
 }
