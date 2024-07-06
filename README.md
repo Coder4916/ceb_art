@@ -1,6 +1,6 @@
 # **CEB Art**
 
-![CEB Art image]()
+![CEB Art image](/media/amiresponsive.png)
 
 ## **Table of Contents**
 
