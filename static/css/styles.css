@@ -8,7 +8,7 @@
 /* CSS using the CI walkthrough as guidance */
 
 body {
-  position: relative;
+  margin-bottom: 40px;
 }
 
 .header-bg {
@@ -197,7 +197,7 @@ a.category-badge > span.badge:hover {
   left: 0;
   right: 0;
   width: 100%;
-  height: 20px;
+  height: 40px;
 }
 
 h2, 
