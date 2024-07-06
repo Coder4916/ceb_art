@@ -101,13 +101,6 @@
         {% block content %}
         {% endblock %}
 
-        <!-- Footer-->
-        <footer class="py-5 bg-dark footer">
-            <div class="container-fluid">
-                <p class="text-center text-white">Copyright &copy; CEBArt <span id="copyright"></span></p>
-            </div>
-        </footer>
-
         {% block extra_js %}
         <script>
             $("#copyright").text(new Date().getFullYear())
