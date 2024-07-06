@@ -138,34 +138,6 @@ a.category-badge > span.badge:hover {
   width: 100%;
 }
 
-.checkout {
-  margin-bottom: 11rem;
-}
-
-.password_reset,
-.sign-up {
-  margin-bottom: 9rem;
-}
-
-.login {
-  margin-bottom: 5rem;
-}
-
-.logout {
-  margin-bottom: 10rem;
-}
-
-.product-dets {
-  margin-bottom: 11rem;
-}
-
-.shop-cart,
-.reviews,
-.products,
-.success {
-  margin-bottom: 9rem;
-}
-
 h2, 
 a, 
 p, 
