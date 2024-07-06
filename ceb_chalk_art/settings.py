@@ -26,7 +26,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
-DEVELOPMENT = os.environ('DEVELOPMENT', '')
 
 ALLOWED_HOSTS = [
     '8000-coder4916-cebart-exjs31guuwj.ws.codeinstitute-ide.net',
