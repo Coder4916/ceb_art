@@ -193,7 +193,8 @@ a.category-badge > span.badge:hover {
 
 .footer {
   position: absolute;
-  margin-bottom: 0;
+  margin:auto;
+  bottom: 0px;
   left: 0;
   right: 0;
   width: 100%;
