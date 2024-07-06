@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* CSS using the CI walkthrough as guidance */
 
 .header-bg {
@@ -74,6 +81,22 @@ a.category-badge > span.badge:hover {
   display: none;
 }
 
+.allauth-form-inner-content input::-webkit-input-placeholder {
+  color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-moz-placeholder {
+  color: #aab7c4;
+}
+
+.allauth-form-inner-content input:-ms-input-placeholder {
+  color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-ms-input-placeholder {
+  color: #aab7c4;
+}
+
 .allauth-form-inner-content input::placeholder {
   color: #aab7c4;
 }
@@ -98,7 +121,32 @@ a.category-badge > span.badge:hover {
     border-radius: 0;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-transition: color 
+    .15s ease-in-out,background-color 
+    .15s ease-in-out,border-color 
+    .15s ease-in-out,-webkit-box-shadow 
+    .15s ease-in-out;
+    transition: color 
+    .15s ease-in-out,background-color 
+    .15s ease-in-out,border-color 
+    .15s ease-in-out,-webkit-box-shadow 
+    .15s ease-in-out;
+    -o-transition: color 
+    .15s ease-in-out,background-color 
+    .15s ease-in-out,border-color 
+    .15s ease-in-out,box-shadow 
+    .15s ease-in-out;
+    transition: color 
+    .15s ease-in-out,background-color 
+    .15s ease-in-out,border-color 
+    .15s ease-in-out,box-shadow 
+    .15s ease-in-out;
+    transition: color 
+    .15s ease-in-out,background-color 
+    .15s ease-in-out,border-color 
+    .15s ease-in-out,box-shadow 
+    .15s ease-in-out,-webkit-box-shadow 
+    .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,

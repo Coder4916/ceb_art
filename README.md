@@ -300,7 +300,7 @@ These features will be added where possible during further development phases:
 
 - Issue: Migrating to Gitpod Enterprise.
 
-Solution - env.py file was initially reinstated incorrectly and a new 'allowed host' in project settings.py also had to be updated correctly. The new url/endpoint in Stripe also needed fixing, to allow payments/webhooks to function properly. Sizes for all products had to be reset to true in the admin app, for sizes to display in products details.
+Solution - env.py file was initially reinstated incorrectly and a new 'allowed host' in project settings.py also had to be updated correctly. The new url/endpoint in Stripe also needed fixing, to allow payments/webhooks to function properly. Sizes for all products had to be reset to true in the admin app, for sizes to display in products details. (Still missing in deployed version).
 
 - Issue: Migrating products and categories from the Product and Category .models, error in console.
 
@@ -352,20 +352,16 @@ The Website was developed using [Gitpod](https://gitpod.io/workspaces) and Gitpo
 
 1. Generate a requirements.txt file
 2. Inside the root directory of your project, create a Procfile
-3. Inside the file, add the following command: python3 run.py
-4. Open your __init__.py file
-5. Add an if statement before the line setting the SLQALCHEMY_DATABASE_URI and, in the else, set the value to reference a new variable, DATABASE_URL.
-6. To ensure that SQLAlchemy can read an external database, its URL should start with “postgresql://”, changes should not be made to this in the environment variable. Instead, make an addition to the else statement from the previous step to adjust the DATABASE_URL in case it starts with postgres://:
-7. Save all files and then add, commit and push changes to GitHub
-8. Log into Heroku.com and click “New” and then “Create a new app”
-9. Choose a unique name for the app, select a region and click “Create app”
-10. Go to the Settings tab of your new app
-11. Click Reveal Config Vars
-12. Return to your ElephantSQL tab and copy your database URL
-13. Back on Heroku, add a Config Var called DATABASE_URL and paste your ElephantSQL database URL in as the value. Make sure you click “Add”
-14. Add each of your other environment variables except DEVELOPMENT and DB_URL from the env.py file as a Config Var.
-15. Navigate to the “Deploy” tab of your app
-16. In the Deployment method section, select “Connect to GitHub”
+3. Save all files and then add, commit and push changes to GitHub
+4. Log into Heroku.com and click “New” and then “Create a new app”
+5. Choose a unique name for the app, select a region and click “Create app”
+6. Go to the Settings tab of your new app
+7. Click Reveal Config Vars
+8. Return to your ElephantSQL tab and copy your database URL
+9. Back on Heroku, add Config Vars for the ElephantSQL database, Stripe, and live emails. Make sure you click “Add”
+10. Navigate to the “Deploy” tab of your app
+11. In the Deployment method section, select “Connect to GitHub”
+12. Deploy main branch, and view deployment.
 
 [Back to top](#ceb-art)
 
@@ -448,19 +444,23 @@ Below are some examples of areas of the site that I have tested and checked for 
 Once deployed, the website links were tested to ensure that:
 
 - All navigation external/internal links are working correctly, and filepaths are correct.
-- The social media links are working and opening in a new tab.
 - Hovering and Active states are working.
-- The shopping cart and checkout systems are working correctly.
-- The Stripe payment and webhooks continue to work.
-- Emails are sent correctly from the site.
+- All buttons are working as required.
 
 ### **Forms Testing**
 
-The CEB Art details, shopping cart and checkout forms were tested to make sure that the required fields and buttons/inputs are working, and the form POSTs any input data correctly to the site. I have also included an image of the successful artwork orders added to the admin app and database, and Stripe api.
+The CEB Art details, shopping cart, checkout forms and emails were tested to make sure that the required fields and buttons/inputs are working, and the form POSTs any input data correctly to the site. I have included the following images, that display successful forms testing.
 
 ![Example of form data successfully posted to my_database](/media/orderssuccess.png)
 
-![Example of form data successfully posted to the Stripe Developers page](/media/stripesuccess.png)
+![Stripe payment success](/media//paymentsuccess.png)
+
+![Webhook success](/media/webhooksuccess.png)
+
+![Console email confirmation](/media/console_email.png)
+
+![Deployed email confirmation](/media/deployedemail.png)
+
 
 ## **Autoprefixer CSS**
 
@@ -470,19 +470,23 @@ Autoprefixer CSS was used to add CSS vendor prefixes to the CSS rules after the 
 
 The following image shows the CSS code placed into the W3C validator testing app to check for any incorrect code. There were no errors or warnings to show:
 
-![CSS checked](/my_suite/static/img/cssw3c.png)
+![Styles.css checked](/media/styles.css.png)
+
+![Profiles css](/media/profiles.css.png)
+
+![Checkout css](/media/checkout.css.png)
 
 ## **Lighthouse Testing**
 
-Chrome Lighthouse testing was used to check the performance, accessibility, best practices, and SEO. After applying some changes to make the performance faster, including compression and resizing of images, the results below were achieved:
-
-- Desktop:
-
-![The CB Suite Lighthouse testing](/my_suite/static/img/desktop-lh.png)
+Chrome Lighthouse testing was used to check the performance of the products app including accessibility, best practices, and SEO. After applying some changes to make the performance faster, including compression and resizing of images, the results below were achieved:
 
 - Mobile:
 
-![The CB Suite Lighthouse testing](/my_suite/static/img/mobile-lh.png)
+![The CB Suite Lighthouse testing](/media/mobilelighthouse.png)
+
+- Desktop:
+
+![The CB Suite Lighthouse testing](/media/desktoplighthouse.png)
 
 ## **Further Testing**
 
@@ -500,50 +504,40 @@ Friends and family members were asked to review the site and documentation to po
 
 ### **Code**
 
-1. The [Code Institute Walkthrough project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DIWADRDB+2022_Q3/courseware/c0c31790fcf540539fd2bd3678b12406/6e44128b0b37416ab40c1a87ef2cb32a/) was used extensively to guide me through the creation of my site, through to project completion.
+1. The [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+3/courseware/4201818c00aa4ba3a0dae243725f6e32/d3188bf68530497aa5fba55d07a9d7d7/) was used extensively to guide me through the creation of my site, through to project completion.
 
-2. [Bootstrap 5.3](https://getbootstrap.com/): Bootstrap was used extensively throughout the project, including the use of the following components:
+2. [Bootstrap 5.3](https://getbootstrap.com/): Bootstrap was utilised throughout, including the use of the following components:
 
-- [Cards for each game](https://getbootstrap.com/docs/5.3/components/card/#about)
+- [Cards for each product and review](https://getbootstrap.com/docs/5.3/components/card/#about)
 - [Bootstrap grid system](https://getbootstrap.com/docs/5.3/layout/grid/#example)
-- [A Bootstrap Accordion](https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works)
 
-3. [Stackoverflow](https://try.stackoverflow.co/explore-teams?utm_source=adwords&utm_medium=ppc&utm_campaign=kb_teams_search_brand_emea-dach&_bt=657236278306&_bk=stack+overflow&_bm=p&_bn=g&gad_source=1&gclid=Cj0KCQjwk6SwBhDPARIsAJ59GwcGy0TWHr4Xg0bldUwSZjn60NaaP0w7oL_qF8TbqwyaGXH6KOPf-jkaAk0jEALw_wcB) was used to find solutions to problems/issues when building the website, for example, finding out [more information](https://stackoverflow.com/questions/69673044/why-my-rating-is-going-reverse-direction) when trying to create a star rating system in the add_review page. 
+3. [Slack channels](https://app.slack.com/client/T0L30B202/C05E2K3NJTG) were used extensively to research debugging techniques and console issues.
 
-4. [W3Schools](https://www.w3schools.com/) was used to get assitance with postgreSQL statements when manipulating data/tables in my_database.
+4. [Autoprefixer CSS](https://autoprefixer.github.io/): was used to add vendor prefixer to CSS.
 
-5. [PostgreSQL Tutorial](https://www.postgresqltutorial.com/) was also used to get help with different statements/commands when trying to manipulate my_database. This included deleting the entire database, deleting and adding columns, and altering the data in a column.
-
-6. [Autoprefixer CSS](https://autoprefixer.github.io/): was used to add different vendor prefixer to CSS.
-
-7. [W3C Validator Testing](https://validator.w3.org/nu/#textarea) was used to check for any errors in my CSS code.
-
-8. [Youtube tutorials](https://www.youtube.com/watch?v=0q6neX8jd44&t=69s) were used to help create certain aspects of the site, including a simple star rating system.
+5. [W3C Validator Testing](https://validator.w3.org/nu/#textarea) was used to check for any errors in my CSS code.
 
 ### **Images**
 
-I used this [image](https://www.pexels.com/photo/set-of-modern-gadgets-on-table-5861322/) by [Athena](https://www.pexels.com/@athena/), which was sourced from Pexels for the header of each site page.
+I used this [image](https://www.pexels.com/photo/abstact-design-of-different-colors-2881262/) by [Kevin Dorg](https://www.pexels.com/@kevin-dorg-136105/), which was sourced from Pexels for the header of each application template.
 
-The following images I sourced from various sites to use for my game cards:
+The following images I sourced from various sites to use for my product cards:
 
-[Etsy image](https://www.etsy.com/uk/listing/1514733901/super-mario-wonder-poster-2?gpla=1&gao=1&&utm_source=google&utm_medium=cpc&utm_campaign=shopping_uk_en_gb_c-art_and_collectibles-prints-digital_prints&utm_custom1=_k_Cj0KCQjwqpSwBhClARIsADlZ_TlySr5JO1I4H-_Px_v7eXiz3FL1ViaL9xbqCVQTXdpjAz4fMwt3Gf0aAi6zEALw_wcB_k_&utm_content=go_12604170148_121488004522_508814058911_pla-328046931108_c__1514733901engb_102858184&utm_custom2=12604170148&gad_source=1&gclid=Cj0KCQjwqpSwBhClARIsADlZ_TlySr5JO1I4H-_Px_v7eXiz3FL1ViaL9xbqCVQTXdpjAz4fMwt3Gf0aAi6zEALw_wcB); used for the Super Mario game card.
+Justin Maas's [Instagram](https://www.instagram.com/maas.art/); artwork was used for the pencil category cards, alongside some of my own sketches.
 
-[CD keys images](https://www.cdkeys.com/star-wars-jedi-survivor-pc-origin?__currency=gbp&gad_source=1&irclickid=xXpWqtXYmxyPUR9RiQWj01vfUkHUPSSG51yfS40&utm_source=impact&utm_medium=affiliate&utm_campaign=razorcreations&irgwc=1); used for Star Wars, Streetfighter and Resident Evil game cards.
+The Batman sketch was sourced from [Painting Valley](https://paintingvalley.com/download-image#batman-pencil-drawing-28.jpg)
 
-[Gaming deals images](https://www.gamingdeals.com/games/marvels-spider-man-2/?edition=Standard+Edition&platform=PS5&track=css_pages&utm_source=google&utm_medium=css_pages&utm_campaign=comparison&gad_source=1&gclid=Cj0KCQjwqpSwBhClARIsADlZ_Tl9-y7izhY2hj-AO04YcCnGJiaPeoh_k28g17EuIXg1xbKJn6BqVn8aAsdYEALw_wcB); used for the Spider Man and Final Fantasy cards.
+The colorful eye was sourced from [Pinterest](https://www.pinterest.com/pin/1118018676229109658/)
 
-[Infinite Bargains image](https://infinite-bargains.co.uk/products/harry-potter-hogwarts-legacy-maxi-poster-print-61x91-5cm?variant=47551905530169&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gclid=Cj0KCQjwqpSwBhClARIsADlZ_TlDyj48hEt7DcIKLn8ePMIZfBlXjEhMhom8Q0CERBJG1laTeqYqtAYaAhQQEALw_wcB); used for the Hogwarts game card.
+[Pinterest](https://www.pinterest.com/search/pins/?q=paint%20art&rs=typed); was used to source all paint, Dali and Banksy images.
 
-All other game card images were sourced from [Wikipedia](https://en.wikipedia.org/wiki/Alan_Wake_2).
-
-### **Additional content**
-
+All chalk artwork was sourced from my own gallery.
 
 
 ## **Acknowledgements**
 
 - My mentor, Oluwaseun Owonikoko, for her guidance and helpful feedback on all aspects of the Website.
-- The Code Institute tutors who helped me with any coding issues and debugging techniques when building the site.
+- All Code Institute tutors for their patience and support, helping me with my coding issues, and assisting with debugging techniques.
 - My wife Beth for her constant support throughout, and for proof reading and testing my site material.
 
 [Back to top](#ceb-art)
