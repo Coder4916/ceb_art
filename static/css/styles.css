@@ -34,6 +34,7 @@ a.category-badge > span.badge:hover {
 }
 
 .intro {
+	height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -55,9 +56,11 @@ a.category-badge > span.badge:hover {
 }
 
 .overlay {
+	height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
+	position: fixed;
 	background: whitesmoke;
 	z-index: -1;
 }
@@ -142,8 +145,7 @@ a.category-badge > span.badge:hover {
     .15s ease-in-out,background-color 
     .15s ease-in-out,border-color 
     .15s ease-in-out,box-shadow 
-    .15s ease-in-out,-webkit-box-shadow 
-    .15s ease-in-out;
+    .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
@@ -183,6 +185,13 @@ a.category-badge > span.badge:hover {
   background-color: #dc3545;
   border-color: #dc3545;
   border-radius: 0;
+}
+
+.footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 h2, 
