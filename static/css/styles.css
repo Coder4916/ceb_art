@@ -200,7 +200,7 @@ a.category-badge > span.badge:hover {
   height: 100px;
 }
 
-.footer > p {
+.footer, p {
   margin-top: 50%;
 }
 
