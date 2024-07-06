@@ -7,6 +7,10 @@
 
 /* CSS using the CI walkthrough as guidance */
 
+body {
+  position: relative;
+}
+
 .header-bg {
   background: url('/media/bg-color.avif') no-repeat center fixed;
   background-size: cover;
