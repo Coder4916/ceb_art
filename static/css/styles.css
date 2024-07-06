@@ -48,6 +48,16 @@ a.category-badge > span.badge:hover {
   overflow-y:auto;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: whitesmoke;
+	z-index: -1;
+}
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p{
