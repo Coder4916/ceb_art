@@ -6,7 +6,7 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'Categories'
     name = models.TextField()
-    friendly_name = models.TextField(null = True, blank=True)
+    friendly_name = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.name

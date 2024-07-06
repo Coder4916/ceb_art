@@ -14,6 +14,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='review',
             name='username_id',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='about_us.username'),
-        ),
-    ]
+            field=models.ForeignKey(blank=True, null=True,
+                                    on_delete=django.db.models.deletion.SET_NULL,
+                                    to='about_us.username'),
+                                    ),]

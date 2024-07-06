@@ -93,7 +93,7 @@ def checkout(request):
         if not cart:
             messages.error(request, "There's nothing in your cart!")
             return redirect(reverse('products'))
-        
+
         current_cart = cart_contents(request)
         total = current_cart['grand_total']
         stripe_total = round(total * 100)
@@ -103,7 +103,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+    # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -138,8 +138,8 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
-    
-    #Handle successful checkouts
+
+    # Handle successful checkouts
 
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)

@@ -14,7 +14,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Review',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                 serialize=False, verbose_name='ID')),
                 ('review', models.TextField(blank=True, null=True)),
                 ('username', models.TextField(blank=True, null=True)),
                 ('review_date', models.DateTimeField(auto_now_add=True)),

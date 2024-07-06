@@ -8,7 +8,7 @@ from .models import Product, Category
 from .forms import ProductForm
 
 
-#A view to render the art_products
+# A view to render the art_products
 def art_products(request):
 
     products = Product.objects.all()
@@ -32,7 +32,6 @@ def art_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(art_category__name__in=categories)
@@ -42,7 +41,7 @@ def art_products(request):
             search = request.GET['q']
             if not search:
                 messages.error(request, "No search request entered!")
-                return redirect(reverse ('products'))
+                return redirect(reverse('products'))
 
             searches = Q(artwork__icontains=search) | Q(description__icontains=search) | Q(art_image__icontains=search)
             products = products.filter(searches)
@@ -58,7 +57,7 @@ def art_products(request):
     return render(request, 'products/art_products.html', context)
 
 
-#A view to render the artwork details
+# A view to render the artwork details
 def artwork_details(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
@@ -127,7 +126,6 @@ def update_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-        
     # Delete a product from the store
     if not request.user.is_superuser:
         messages.error(request, 'Unable to complete this action, please contact the site administrator')

@@ -12,7 +12,5 @@ def about_us(request):
         'reviews': reviews,
         'usernames': usernames,
     }
-    
+
     return render(request, 'about_us/about_us.html', context)
-
-
