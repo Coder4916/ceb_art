@@ -1,7 +1,7 @@
 /* CSS using the CI walkthrough as guidance */
 
 .header-bg {
-  background: url('/media/bg-color.avif/') no-repeat center fixed;
+  background: url('/media/bg-color.avif') no-repeat center fixed;
   background-size: cover;
   height: calc(100vh - 164px);
   color: #555;
