@@ -137,8 +137,7 @@ else:
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
     "https://ceb-art-3810bf4d9953.herokuapp.com/",
-    "https://www.gitpod.io/",
-    'https://8000-coder4916-cebart-exjs31guuwj.ws.codeinstitute-ide.net'
+    'https://8000-coder4916-cebart-uumsw8xooj4.ws-eu116.gitpod.io/',
 ]
 
 
@@ -219,7 +218,7 @@ STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'craigebailey916@gmail.com'
+    DEFAULT_FROM_EMAIL = 'example.email@gmail.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
